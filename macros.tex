@@ -1,0 +1,21 @@
+% colors for boxes
+\definecolor{color_guideline}{RGB}{0, 92, 171}
+\definecolor{color_example}{rgb}{0.65,0.65,0.65}
+
+% guidelines
+\newcounter{guidelinecounter}
+\newcommand{\guideline}[1]{%
+\refstepcounter{guidelinecounter}
+\begin{tcolorbox}[colback=white,colframe=color_guideline,title=Guideline \theguidelinecounter.]
+    #1
+\end{tcolorbox}%
+}
+
+% text examples in two-column format
+\newcommand{\textexample}[2]{%
+\begin{tcolorbox}[sidebyside,colback=white,coltitle=black,colframe=color_example,title=Example.]
+    #1
+    \tcblower
+    #2
+\end{tcolorbox}%
+}
