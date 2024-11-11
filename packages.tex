@@ -1,0 +1,31 @@
+\usepackage{libertine}
+% \usepackage{libertinust1math} % For math fonts (if needed)
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+%\usepackage[pass]{geometry}  % to make a5paper work
+\usepackage[a5paper,bottom=3cm]{geometry}
+
+\usepackage{setspace}
+\setstretch{1.2}  % default value: 1.44
+
+\usepackage{multicol}  % for text examples
+
+\usepackage{lipsum}  % for dummy text
+
+\usepackage{csquotes}  % for displayquote
+
+\usepackage{xcolor}
+\usepackage{tcolorbox}  % for golden rule
+
+\usepackage{fancyhdr}  % for formatting headers
+\pagestyle{fancy}  % enable custom header functionality
+\renewcommand{\headrulewidth}{0pt}  % no horizontal line below header
+
+\fancyhead[L]{\thepage}  % left header: page number
+\fancyhead[C]{}
+\fancyhead[R]{\nouppercase{\leftmark}}  % right header: chapter number and name
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
