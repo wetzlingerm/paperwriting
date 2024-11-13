@@ -1,21 +1,33 @@
 % colors for boxes
 \definecolor{color_guideline}{RGB}{0, 92, 171}
 \definecolor{color_example}{rgb}{0.65,0.65,0.65}
+\definecolor{color_highlight}{RGB}{255, 195, 37}
 
 % guidelines
 \newcounter{guidelinecounter}
 \newcommand{\guideline}[1]{%
 \refstepcounter{guidelinecounter}
-\begin{tcolorbox}[colback=white,colframe=color_guideline,title=Guideline \theguidelinecounter.]
+\begin{tcolorbox}[sharp corners=northwest,colback=white,colframe=color_guideline,title=Guideline \theguidelinecounter.]
     #1
 \end{tcolorbox}%
+\addcontentsline{toc}{section}{Guideline \theguidelinecounter. #1}
 }
 
-% text examples in two-column format
-\newcommand{\textexample}[2]{%
-\begin{tcolorbox}[sidebyside,colback=white,coltitle=black,colframe=color_example,title=Example.]
+% text example for comparison good/bad (two columns)
+\newcommand{\goodbadexample}[2]{%
+\begin{tcolorbox}[sidebyside,sidebyside align=top,colback=white,coltitle=black,colframe=color_example,title=Example.]
     #1
     \tcblower
     #2
 \end{tcolorbox}%
 }
+
+% text example (single column)
+\newcommand{\goodexample}[1]{%
+\begin{tcolorbox}[colback=white,coltitle=black,colframe=color_example,title=Example.]
+    #1
+\end{tcolorbox}%
+}
+
+% highlight background of crucial parts
+\newcommand{\highlightpart}[1]{\colorbox{color_highlight}{#1}}
