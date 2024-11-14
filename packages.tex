@@ -10,14 +10,16 @@
 \usepackage{setspace}
 \setstretch{1.2}  % default value: 1.44
 
-\usepackage{multicol}  % for text examples
+\usepackage{mathtools,amsfonts}  % for math (loads amsmath, amsfonts(?), amssymb)
 
-\usepackage{lipsum}  % for dummy text
+\usepackage{pifont}  % for checkmark, cross
 
-\usepackage{csquotes}  % for displayquote
+\usepackage{xcolor}  % customized colors
+\usepackage{tcolorbox}  % for guidelines and examples
+\tcbuselibrary{skins}  % enhanced formatting for tcolorbox
+\tcbuselibrary{raster}  % for good/bad examples
 
-\usepackage{xcolor}
-\usepackage{tcolorbox}  % for golden rule
+\usepackage{soul}  % for highlighting multiline text
 
 \usepackage{fancyhdr}  % for formatting headers
 \pagestyle{fancy}  % enable custom header functionality

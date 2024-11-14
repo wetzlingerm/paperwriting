@@ -1,33 +1,63 @@
 % colors for boxes
 \definecolor{color_guideline}{RGB}{0, 92, 171}
-\definecolor{color_example}{rgb}{0.65,0.65,0.65}
+\definecolor{color_guideline_background}{rgb}{0.588, 0.784, 0.902}
+\definecolor{color_example_frame}{rgb}{0.65,0.65,0.65}
 \definecolor{color_highlight}{RGB}{255, 195, 37}
+% \definecolor{color_example_good}{rgb}{0.4706,0.7725,0.4980}
+% \definecolor{color_example_bad}{rgb}{0.9059,0.7373,0.7373}
+
+\definecolor{color_example_good}{HTML}{228B22}
+\definecolor{color_example_bad}{HTML}{B22222}
+
 
 % guidelines
 \newcounter{guidelinecounter}
 \newcommand{\guideline}[1]{%
 \refstepcounter{guidelinecounter}
-\begin{tcolorbox}[sharp corners=northwest,colback=white,colframe=color_guideline,title=Guideline \theguidelinecounter.]
+\begin{tcolorbox}[
+    title=Guideline \theguidelinecounter.,
+    colback=color_guideline_background, colframe=color_guideline,
+    sharp corners=northwest,bottomrule=0mm,rightrule=0mm,leftrule=0mm]
     #1
 \end{tcolorbox}%
 \addcontentsline{toc}{section}{Guideline \theguidelinecounter. #1}
 }
 
 % text example for comparison good/bad (two columns)
-\newcommand{\goodbadexample}[2]{%
-\begin{tcolorbox}[sidebyside,sidebyside align=top,colback=white,coltitle=black,colframe=color_example,title=Example.]
+\newcommand{\goodbadexample}[2]{
+\begin{tcbraster}[raster columns=1]
+\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.75mm}{color_example_bad},
+    top=0.5mm,bottom=0.5mm]
     #1
-    \tcblower
+\end{tcolorbox}
+\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.75mm}{color_guideline},
+    top=0.5mm,bottom=0.5mm]
     #2
 \end{tcolorbox}%
+\end{tcbraster}%
 }
 
 % text example (single column)
+\newcommand{\badexample}[1]{%
+\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.75mm}{color_example_bad},
+    top=0.5mm,bottom=0.5mm]
+    #1
+\end{tcolorbox}%
+}
 \newcommand{\goodexample}[1]{%
-\begin{tcolorbox}[colback=white,coltitle=black,colframe=color_example,title=Example.]
+\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.75mm}{color_guideline},
+    top=0.5mm,bottom=0.5mm]
     #1
 \end{tcolorbox}%
 }
 
 % highlight background of crucial parts
-\newcommand{\highlightpart}[1]{\colorbox{color_highlight}{#1}}
+\sethlcolor{color_highlight}
+\newcommand{\highlightpart}[1]{\hl{#1}}
+\newcommand{\highlightempty}{\hl{ }}
+\newcommand{\highlightpartmath}[1]{\colorbox{color_highlight}{#1}}  % soul can run into problems in math env
+
