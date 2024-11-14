@@ -1,0 +1,17 @@
+
+\guideline{Refer to environments instead of introducing new names.}
+
+\goodbadexample{
+    \textbf{Algorithm 1.} \highlightpart{\textsc{RandomSimulation}} \\
+    (...) \smallskip
+
+    \highlightpart{Our proposed algorithm \textsc{RandomSimulation}} simulates the system for randomly selected initial states.
+}{
+    \textbf{Algorithm 1.} \highlightpart{Random simulation.} \\
+    (...) \smallskip
+
+    \highlightpart{Algorithm~1} simulates the system for randomly selected initial states.
+}
+
+\noindent The environment's name serves as an identifier, eliminating the need for an additional one.
+Such identifiers seamlessly integrate into running text, as well as pseudocode and tables.
