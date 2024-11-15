@@ -1,0 +1,12 @@
+
+\guideline{Avoid using non-standard words with hyphens.}
+
+\goodbadexample{
+    Another approach iteratively refines the time step size to eventually satisfy a \highlightpart{user-defined} error bound between the exact reachable set and the computed \highlightpart{outer-approximation} [1].
+}{
+    Another approach iteratively refines the time step size to eventually satisfy a \highlightpart{user-defined} error bound between the exact reachable set and the computed \highlightpart{outer approximation} [1].
+}
+
+\noindent \LaTeX{} implements the typographic convention that hyphenated words are not split across lines.
+Since double-column formats are prone to splitting words due to the relatively short text width, one may easily encounter formatting issues when using (long) hyphenated words, such as ``outer-approximation'' in the example above.
+The example also illustrates that some hyphenated words are standard adjectives where the hyphen is necessary, such as ``well-known'', ``high-level'', and ``real-time''.

@@ -1,0 +1,25 @@
+
+\guideline{Avoid using multiple hierarchies of indices.}
+
+\goodbadexample{
+    (...) to ensure that the approximation of the support function is exact for the current candidate policy $\pi_{(\cdot)}^{(j)}$, i.e.,
+    \begin{equation*}
+        \tilde{\rho} (\ell)
+        =
+        \rho_{
+            \text{\highlightpart{$\Delta \widehat{\mathcal{R}}(k,\bar{u}_{(\cdot)}^{(j)},K_{(\cdot)}^{(j)})$}}
+        } (\ell)
+        .
+    \end{equation*}
+}{
+    (...) to ensure that the approximation of the support function is exact for the current candidate policy $\pi_{(\cdot)}^{(j)}$, i.e.,
+    \begin{equation*}
+        \tilde{\rho} (\ell)
+        =
+        \rho \highlightpartmath{\Big( \Delta \widehat{\mathcal{R}}\big(k,\bar{u}_{(\cdot)}^{(j)},K_{(\cdot)}^{(j)}\big), \ell \Big)}.
+    \end{equation*}
+}
+
+\noindent Multiple levels of indices in equations can become hard to read because they create visual clutter.
+To improve readability, functions or variables with complex indices can be redefined using simpler notations or intermediate variables.
+
