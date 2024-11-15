@@ -1,0 +1,22 @@
+
+\guideline{Avoid language-specific functions in pseudocode.}
+
+\goodbadexample{
+    \textbf{Algorithm 1.} Random simulation. \\
+    Input: Generator matrix $G$, (...) \\
+    Output: (...) \\
+    \begin{scriptsize}
+        1:
+    \end{scriptsize}
+    $m \gets \highlightpartmath{\textsc{shape}(G,2)}$ \\
+    (...)
+}{
+    \textbf{Algorithm 1.} Random simulation. \\
+    Input: Generator matrix $G \in \mathbb{R}^{n \times \highlightpartmath{m}}$, (...) \\
+    Output: (...) \\
+    (...)
+}
+
+\noindent Using language-specific functions may hinder understanding across diverse audiences, as some readers may not be familiar with any given programming language.
+In simple cases, there may be a more rigorous way to achieve the same goal, as shown in the example above.
+If a language-specific function is particularly useful, its behavior can be briefly described in the running text.

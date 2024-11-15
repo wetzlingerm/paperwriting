@@ -1,0 +1,24 @@
+
+\guideline{Avoid using custom formatting.}
+
+\goodbadexample{
+    Our proposed algorithm has the following advantages and disadvantages:
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item[\highlightpart{$+$}] Our verification algorithm can handle complex verification tasks involving time-varying specifications.
+        \item[\highlightpart{$+$}] The autonomy of our approach enables practitioners to verify
+        or falsify safety specifications with requiring specialized knowledge.
+        \item[\highlightpart{$-$}] Other tools solve high-dimensional benchmarks often faster than our approach through tailored algorithms.
+        \item[\highlightpart{$-$}] In cases where there is no initial uncertainty, our algorithm is unable to falsify the system, as the computed inner approximation of the reachable set will always be empty.
+    \end{itemize}
+}{
+    Let us briefly address the strengths and weaknesses of our proposed approach:
+    \highlightpart{A major advantage} of our verification algorithm is its ability to handle complex verification tasks involving time-varying specifications, and its autonomous nature allows practitioners to easily verify or falsify safety specifications without requiring specialized knowledge.
+    \highlightpart{However}, our approach may be slower compared to other tools, which often solve high-dimensional benchmarks faster through tailored algorithms.
+    \highlightpart{Additionally}, in cases where there is no initial uncertainty, our algorithm is unable to falsify the system, as the computed inner approximation of the reachable set will always be empty.
+}
+
+\noindent The formatting options provided by the \LaTeX{} template---such as headings, paragraphs, (un)ordered lists, and special environments (e.g., algorithms, tables, figures)---offer sufficient flexibility.
+The need for custom formatting may suggest that the content is not well-structured or clearly phrased.
+There are multiple ways to convert custom formatting into built-in formatting:
+by using transitional phrases to establish a clear relationship between parts of the text (as used in the example above), by using a more rigid structural element that can be referenced, or by using an explanatory figure for more complex relationships.
