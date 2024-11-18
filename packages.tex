@@ -32,3 +32,19 @@
 \fancyfoot[L]{}
 \fancyfoot[C]{}
 \fancyfoot[R]{}
+
+
+\usepackage[backend=biber,
+    url=false,
+    doi=true,
+    isbn=true,
+    style=ext-numeric-comp,
+    defernumbers=true,
+    %giveninits,
+    sorting=none,
+    maxnames=100]{biblatex}
+\addbibresource{references.bib}
+
+% \DeclareFieldFormat{titlecase:title}{\MakeSentenceCase*{#1}}
+% \DeclareFieldFormat{titlecase:booktitle}{#1}
+% \DeclareFieldFormat{titlecase:journaltitle}{#1}
