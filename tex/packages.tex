@@ -1,8 +1,17 @@
-\usepackage{libertine}
-% \usepackage{libertinust1math} % For math fonts (if needed)
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
+
+% set font to Linux Libertine (non-proprietary font):
+% this requires downloading the font, e.g., from
+%    https://sourceforge.net/projects/linuxlibertine/
+% and installing it manually
+% then, compile using xelatex paperwriting.tex
+% \usepackage{fontspec}
+% \setmainfont{Linux Libertine O}
+% alternative for pdflatex (does not work with certain font variants)
+\usepackage{libertine}
 
 %\usepackage[pass]{geometry}  % to make a5paper work
 \usepackage[a5paper,bottom=3cm]{geometry}
@@ -33,7 +42,14 @@
 \fancyfoot[C]{}
 \fancyfoot[R]{}
 
+% glossary / list of terms
+\usepackage[nopostdot]{glossaries}
+\input{tex/glossaryentries.tex}
+% \setglossarystyle{list}
+% \makeglossaries
 
+
+\usepackage{csquotes}  % required by compilation?
 \usepackage[backend=biber,
     url=false,
     doi=true,
@@ -43,7 +59,7 @@
     %giveninits,
     sorting=none,
     maxnames=100]{biblatex}
-\addbibresource{references.bib}
+\addbibresource{tex/references.bib}
 
 % \DeclareFieldFormat{titlecase:title}{\MakeSentenceCase*{#1}}
 % \DeclareFieldFormat{titlecase:booktitle}{#1}
