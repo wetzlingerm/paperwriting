@@ -1,7 +1,7 @@
 \documentclass[a5paper,openany]{book}
 
-\input{packages.tex}
-\input{macros.tex}
+\input{tex/packages.tex}
+\input{tex/macros.tex}
 
 %%%% titlepage
 \title{\huge Guidelines for Scientific Paper Writing in Computer Science}
@@ -46,14 +46,17 @@
 \part{Writing and Formatting}
 
 \input{lowlevel/nontextelements/0_nontextelements.tex}
-% \input{lowlevel/wording/0_wording.tex}
-% \input{lowlevel/math/0_math.tex}
-% \input{lowlevel/references/0_references.tex}
-% \input{lowlevel/typography/0_typography.tex}
-% \input{lowlevel/orthography/0_orthography.tex}
+\input{lowlevel/wording/0_wording.tex}
+\input{lowlevel/math/0_math.tex}
+\input{lowlevel/references/0_references.tex}
+\input{lowlevel/typography/0_typography.tex}
+\input{lowlevel/orthography/0_orthography.tex}
 
 
 \backmatter
+
+%%%% LIST OF TERMS %%%%
+% \printglossary[title=List of Terms]
 
 %%%% REFERENCES %%%%
 \printbibliography
