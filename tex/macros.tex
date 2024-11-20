@@ -12,15 +12,16 @@
 
 % guidelines
 \newcounter{guidelinecounter}
-\newcommand{\guideline}[1]{%
+\newcommand{\guideline}[2][defaultguidelinelabel]{%
 \refstepcounter{guidelinecounter}
+\label{#1}
 \begin{tcolorbox}[
     title=Guideline \theguidelinecounter.,
     colback=color_guideline_background, colframe=color_guideline,
     sharp corners=northwest,bottomrule=0mm,rightrule=0mm,leftrule=0mm]
-    #1
+    #2
 \end{tcolorbox}%
-\addcontentsline{toc}{section}{Guideline \theguidelinecounter. #1}
+\addcontentsline{toc}{section}{Guideline \theguidelinecounter. #2}
 }
 
 % text example for comparison good/bad (two columns)
@@ -60,3 +61,6 @@
 \newcommand{\highlightpart}[1]{\hl{#1}}
 \newcommand{\highlightempty}{\hl{ }}
 \newcommand{\highlightpartmath}[1]{\text{\highlightpart{$#1$}}}  % soul can run into problems in math env
+
+% row in table of references for guidelines
+\newcommand{\guidelineref}[2]{\ref{#1} & \fullcite{#2} \\}
