@@ -29,6 +29,8 @@
 \tcbuselibrary{skins}  % enhanced formatting for tcolorbox
 \tcbuselibrary{raster}  % for good/bad examples
 
+\usepackage{longtable}  % for table of references for guidelines
+
 \usepackage{soul}  % for highlighting multiline text
 
 \usepackage{fancyhdr}  % for formatting headers
@@ -45,8 +47,8 @@
 % glossary / list of terms
 \usepackage[nopostdot]{glossaries}
 \input{tex/glossaryentries.tex}
-% \setglossarystyle{list}
-% \makeglossaries
+%% \setglossarystyle{list}
+%% \makeglossaries
 
 
 \usepackage{csquotes}  % required by compilation?
@@ -61,6 +63,7 @@
     maxnames=100]{biblatex}
 \addbibresource{tex/references.bib}
 
-% \DeclareFieldFormat{titlecase:title}{\MakeSentenceCase*{#1}}
-% \DeclareFieldFormat{titlecase:booktitle}{#1}
-% \DeclareFieldFormat{titlecase:journaltitle}{#1}
+\DeclareFieldFormat{titlecase:title}{\MakeSentenceCase*{#1}}
+\DeclareFieldFormat{titlecase:booktitle}{#1}
+\DeclareFieldFormat{titlecase:journaltitle}{#1}
+\DeclareFieldFormat{doi}{doi: \text{#1}}
