@@ -12,48 +12,85 @@
 
 % guidelines
 \newcounter{guidelinecounter}
-\newcommand{\guideline}[2][defaultguidelinelabel]{%
+\newcommand{\guideline}[3][defaultguidelinelabel]{%
 \refstepcounter{guidelinecounter}
 \label{#1}
 \begin{tcolorbox}[
     title=Guideline \theguidelinecounter.,
     colback=color_guideline_background, colframe=color_guideline,
-    sharp corners=northwest,bottomrule=0mm,rightrule=0mm,leftrule=0mm]
+    sharp corners=northwest,bottomrule=0mm,rightrule=0mm,leftrule=0mm,
+    left=2mm,right=2mm]
     #2
 \end{tcolorbox}%
 \addcontentsline{toc}{section}{Guideline \theguidelinecounter. #2}
 }
 
 % text example for comparison good/bad (two columns)
-\newcommand{\goodbadexample}[2]{
-\begin{tcbraster}[raster columns=1]
+\newcommand{\goodbadexample}[3][]{%
+\ifx\relax#1\relax
+\begin{tcbraster}[raster row skip=3pt,raster columns=1]
 \begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
-    borderline west={0.75mm}{0.75mm}{color_example_bad},
-    top=0.5mm,bottom=0.5mm]
-    #1
+    borderline west={0.75mm}{0.25mm}{color_example_bad},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #2
 \end{tcolorbox}
 \begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
-    borderline west={0.75mm}{0.75mm}{color_guideline},
-    top=0.5mm,bottom=0.5mm]
-    #2
+    borderline west={0.75mm}{0.25mm}{color_guideline},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #3
 \end{tcolorbox}%
 \end{tcbraster}%
+\else
+{\hfill \scriptsize{#1}}
+\begin{tcbraster}[raster before skip=0pt,raster row skip=3pt,raster columns=1]
+\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.25mm}{color_example_bad},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #2
+\end{tcolorbox}
+\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.25mm}{color_guideline},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #3
+\end{tcolorbox}%
+\end{tcbraster}%
+\fi%
 }
 
 % text example (single column)
-\newcommand{\badexample}[1]{%
+\newcommand{\badexample}[2][]{%
+\ifx\relax#1\relax
 \begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
-    borderline west={0.75mm}{0.75mm}{color_example_bad},
-    top=0.5mm,bottom=0.5mm]
-    #1
+    borderline west={0.75mm}{0.25mm}{color_example_bad},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #2
 \end{tcolorbox}%
+\else
+{\hfill \scriptsize{#1}}
+\begin{tcolorbox}[before skip=0pt,
+    enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.25mm}{color_example_bad},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #2
+\end{tcolorbox}%
+\fi%
 }
-\newcommand{\goodexample}[1]{%
+\newcommand{\goodexample}[2][]{%
+\ifx\relax#1\relax
 \begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
-    borderline west={0.75mm}{0.75mm}{color_guideline},
-    top=0.5mm,bottom=0.5mm]
-    #1
+    borderline west={0.75mm}{0.25mm}{color_guideline},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #2
 \end{tcolorbox}%
+\else
+{\hfill \scriptsize{#1}}
+\begin{tcolorbox}[before skip=0pt,
+    enhanced,frame hidden,interior hidden,colback=white,
+    borderline west={0.75mm}{0.25mm}{color_guideline},
+    top=0mm,bottom=0mm,right=0mm,left=2.5mm]
+    #2
+\end{tcolorbox}%
+\fi%
 }
 
 % highlight background of crucial parts
