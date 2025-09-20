@@ -2,16 +2,16 @@
 \guideline[g:wording:environment_names]
     {Refer to environments instead of introducing new names.}
 
-\goodbadexample{
-    \textbf{Algorithm 1.} \highlightpart{\textsc{RandomSimulation}} \\
+\goodbadexample[{\cite[Sec.~IV.D.]{Wetzlinger2023TAC}}]{
+    \textbf{Algorithm 2.} \highlightpart{\textsc{AutomatedReach}} \\
     (...) \smallskip
 
-    \highlightpart{Our proposed algorithm \textsc{RandomSimulation}} simulates the system for randomly selected initial states.
+    While \highlightpart{our proposed algorithm \textsc{AutomatedReach}} is guaranteed to converge, there is still room for improvement regarding the computation time.
 }{
-    \textbf{Algorithm 1.} \highlightpart{Random simulation.} \\
+    \textbf{Algorithm 2.} \highlightpart{Reachability algorithm (automated tuning).} \\
     (...) \smallskip
 
-    \highlightpart{Algorithm~1} simulates the system for randomly selected initial states.
+    While \highlightpart{Algorithm 2} is guaranteed to converge, there is still room for improvement regarding the computation time.
 }
 
 \noindent The environment's name serves as an identifier, eliminating the need for an additional one.

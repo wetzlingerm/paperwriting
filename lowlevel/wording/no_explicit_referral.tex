@@ -2,20 +2,12 @@
 \guideline[g:wording:reference_details]
     {Avoid explicitly referring to references for details.}
 
-\goodbadexample{
-    \textbf{Definition 1} (Model Predictive Robustness [1, Def. 2])
-    \textit{The model predictive robustness $\rho_p \in [-1, 1]$ quantifies the likelihood that the satisfaction or violation status of a predicate $p$ remains consistent over a finite prediction horizon.
-    The robustness is assigned a positive sign if the predicate is satisfied, and a negative sign if it is violated.}
-
-    \highlightpart{For a detailed formal definition of model predictive robustness, we refer the reader to [1].}
+\goodbadexample[{\cite[Sec.~II.C.]{Wetzlinger2025TAC}}]{
+    To mitigate this issue, one can use zonotope order reduction techniques, \highlightpart{where we refer the interested reader to [17].}
 }{
-    \textbf{Definition 1} (Model Predictive Robustness [1, Def. 2])
-    \textit{The model predictive robustness $\rho_p \in [-1, 1]$ quantifies the likelihood that the satisfaction or violation status of a predicate $p$ remains consistent over a finite prediction horizon.
-    The robustness is assigned a positive sign if the predicate is satisfied, and a negative sign if it is violated.}
-
-    \highlightempty{}
+    To mitigate this issue, one can use zonotope order reduction techniques \highlightpart{[17]}.
 }
 
-\noindent The additional sentence adds no new information, as reference $[1]$ is already included in the definition.
+\noindent The additional clause adds no new information, as reference $[17]$ is already provided.
 Readers are not expected to see all details repeated, only those the author deems relevant.
 Moreover, they know to consult references for further details, as this is a primary purpose of citations.
