@@ -2,10 +2,11 @@
 \guideline[g:math:introduction_of_variables]
     {Introduce variables with a name and a domain.}
 
-\goodbadexample{
-    Given an \highlightpart{initial state} \highlightpart{$x_0 = x(t_0)$}, and an \highlightpart{input trajectory} \highlightpart{$u$}, we denote the solution at time $t \geq t_0$ of a system of the form (1) by $\xi(t; x_0, u(\cdot))$.
+\goodbadexample[{\cite[Sec.~III.]{Wetzlinger2025TAC}}]{
+    A solution to (31) starting from the initial state $\highlightpartmath{x_0}$ using an input trajectory $\highlightpartmath{u(\cdot)}$ and a disturbance trajectory $\highlightpartmath{w(\cdot)}$ is written as $\xi(t; x_0, u(\cdot),w(\cdot))$.
 }{
-    Given an \highlightpart{initial state} $x_0$ \highlightpart{$\in \mathbb{R}^n$} at the \highlightpart{initial time} $t_0$ \highlightpart{$\in \mathbb{R}$}, and an \highlightpart{input trajectory} $u$\highlightpart{$\colon \mathbb{R} \to \mathbb{R}^m$}, we denote the solution at time $t \geq t_0$ of a system of the form (1) by $\xi(t; x_0, u(\cdot))$.
+    \highlightpart{We use $\mathbb{U}$ to denote the set of all input trajectories $u(\cdot)$ for which $\forall t \in [0, t_{\text{end}}]\colon u(t) \in \mathbb{U}$ holds and analogously $\mathbb{W}$ for the set of all disturbances trajectories $w(\cdot)$.}
+    A solution to (31) \highlightpart{at time $t$} starting from the initial state $x_0 \, \highlightpartmath{\in \mathbb{R}^n}$ using an input trajectory $u(\cdot) \, \highlightpartmath{\in \mathbb{U}}$ and a disturbance trajectory $w(\cdot) \, \highlightpartmath{\in \mathbb{W}}$ is written as $\xi(t; x_0, u(\cdot),w(\cdot))$.
 }
 
 \noindent Explicitly mentioning the name and the domain is helpful because it prevents misunderstandings, especially for readers who may not be familiar with certain conventions or who may follow different ones.
