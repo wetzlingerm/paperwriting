@@ -2,14 +2,13 @@
 \guideline[g:math:noninlined_expressions]
     {Use separate environments for long expressions.}
 
-\goodbadexample{
-    Finally, we multiply both sides of $P_k$ with \highlightpart{$T = \text{diag}(I_{n_x+1}, I_{n_w}, \lambda_p^{-1}, I_{n_x} , I_{n_x+1}, I_{n_x} , I_{n_u}, \lambda_w, I_{n_q})$} to obtain the LMI $T^\top P_k T \succeq 0$, which yields the claim.
+\goodbadexample[{\cite[Sec.~III.B.]{Wetzlinger2024CSL}}]{
+    Moreover, let $\highlightpartmath{\mathcal{S} \coloneqq \{ x \in \mathbb{R}^n | \exists a \in \mathcal{A}\colon x = a + \varphi(a)\} }$.
 }{
-    Finally, we multiply both sides of $P_k$ with the matrix
+    Moreover, let
     \begin{equation*}
-        \text{\highlightpart{$T = \text{diag}(I_{n_x+1}, I_{n_w}, \lambda_p^{-1}, I_{n_x} , I_{n_x+1}, I_{n_x} , I_{n_u}, \lambda_w, I_{n_q})$}}
+        \highlightpartmath{\mathcal{S} \coloneqq \{ x \in \mathbb{R}^n | \exists a \in \mathcal{A}\colon x = a + \varphi(a)\}}.
     \end{equation*}
-    to obtain the LMI $T^\top P_k T \succeq 0$, which yields the claim.
 }
 
 \noindent The length of the expression and its height (due to subscripts, superscripts, fractions, etc.) can serve as an indicator for the complexity of the expression.

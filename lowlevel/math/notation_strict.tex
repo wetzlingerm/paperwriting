@@ -2,12 +2,12 @@
 \guideline[g:math:strict_notation]
     {Prefer strict notation.}
 
-\goodbadexample{
-    We linearize the system at each time step $k \in \{0,...,\highlightpartmath{K}\}$ obtain the sequence of state matrices $A_0, ..., \highlightpartmath{A_K}$.
+\goodbadexample[{\cite[Sec.~II.A. \& IV.B.]{Wetzlinger2024CSL}}]{
+    By Definition 1, the union of the individual inner approximations of the time-interval solutions (18) is an inner approximation of the reachable set over the entire time horizon $\highlightpartmath{T} = [0, t_{\text{end}}]$.
 }{
-    \highlightpart{We denote scalars by lowercase letters and matrices by uppercase letters.} \\
+    \highlightpart{We denote vectors by lowercase letters, matrices by uppercase letters}, and sets by calligraphic letters. \\
     (...) \\
-    We linearize the system at each time step $k \in \{0,...,\highlightpartmath{\omega}\}$ obtain the sequence of state matrices $A_0, ..., \highlightpartmath{A_\omega}$.
+    By Definition 1, the union of the individual inner approximations of the time-interval solutions (18) is an inner approximation of the reachable set over the entire time horizon $\highlightpartmath{\tau} = [0, t_{\text{end}}]$.
 }
 
 \noindent Stricter notation benefits readers by providing a consistent framework that aids navigation across sections and supports pattern recognition by highlighting subtle differences, which ultimately speeds up comprehension.

@@ -2,9 +2,20 @@
 \guideline[g:math:variable_indices]
     {Use italics for variable indices/superscripts and roman font for indices/superscripts that abbreviate words.}
 
-\goodexample{
-    Our adaptive cruise control operates with a planning period of $t$\highlightpart{$_{\text{p}}$}, i.e., it provides a new input at discrete planning times $t$\highlightpart{$_k$} $= k \Delta t$\highlightpart{$_{\text{p}}$} to be applied in the time interval $[t$\highlightpart{$_k$}$, t$\highlightpart{$_{k+1}$}$)$.
+\goodbadexample[{\cite[Th.~2]{Wetzlinger2025TAC}}]{
+    The union of time-point EA backward reachable sets
+    \begin{equation*}
+        \bigcup_{t\in\tau_k} \mathcal{R}_{\exists\forall}(-t) = \{ e^{-At} \big( ( \mathcal{X}_{\highlightpartmath{end}} \ominus \mathcal{Z}_{\mathcal{W}}(t) ) \oplus - \mathcal{Z}_{\mathcal{U}}(t)\big) \, | \, t \in \tau_k \}
+    \end{equation*}
+    over $\tau_k = [t_k, t_{k+1}]$ can (...)
+}{
+    The union of time-point EA backward reachable sets
+    \begin{equation*}
+        \bigcup_{t\in\tau_k} \mathcal{R}_{\exists\forall}(-t) = \{ e^{-At} \big( ( \mathcal{X}_{\highlightpartmath{\text{end}}} \ominus \mathcal{Z}_{\mathcal{W}}(t) ) \oplus - \mathcal{Z}_{\mathcal{U}}(t)\big) \, | \, t \in \tau_k \}
+    \end{equation*}
+    over $\tau_k = [t_k, t_{k+1}]$ can (...)
 }
 
-\noindent In the example above, the index ``p'' refers to the term ``planning period'' and is written in roman font.
+\noindent In the example above, the index ``end'' refers to the word ``end'' and is written in roman font.
 In contrast, the index ``k'' refers to the variable time step $k$ and is written in italics.
+Caution: Some \LaTeX{} environments change the font from roman to italics.
