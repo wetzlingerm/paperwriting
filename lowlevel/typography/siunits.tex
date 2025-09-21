@@ -2,24 +2,12 @@
 \guideline[g:typography:si_units]
     {Format SI units correctly.}
 
-\goodbadexample{
-    The dynamics of the quadrotor given as [54, Eq. (3)]
-    \begin{align*}
-        \ddot{s}_x &= \sin(\psi) (u_1 + u_2)/m + w_1 \\
-        \ddot{s}_z &= \cos(\psi) (u_1 + u_2)/m - g + w_2 \\
-        \ddot{\psi} &= (u_2 - u_1) a/(\sqrt{2} I_{yy}) + w_3,
-    \end{align*}
-    where $m = \highlightpartmath{0.027 kg}$ is the mass, $g = \num{9.81} \highlightpartmath{\text{m} \cdot \text{s \textsuperscript{-2}}}$ is the gravitational acceleration, $a = \highlightpartmath{0.0397 \; \text{m}}$ is distance from each motor pair to the center of mass of the quadrotor, and $I_{yy} = \highlightpartmath{0.000014 \si{kg/m^2}}$ is the moment of inertia.
+\goodbadexample[{\cite[Sec.~VII.A.]{Wetzlinger2023TAC}}]{
+    To showcase the general concept of our approach, we first consider the deliberately simple example of an electric circuit consisting of a resistance $R = \highlightpartmath{2\Omega}$, a capacitor with capacity $C = \highlightpartmath{1.5 mF}$, and a coil with inductance $L = \highlightpartmath{\SI{0.0025}{\henry}}$.
 }{
-    The dynamics of the quadrotor given as [54, Eq. (3)]
-    \begin{align*}
-        \ddot{s}_x &= \sin(\psi) (u_1 + u_2)/m + w_1 \\
-        \ddot{s}_z &= \cos(\psi) (u_1 + u_2)/m - g + w_2 \\
-        \ddot{\psi} &= (u_2 - u_1) a/(\sqrt{2} I_{yy}) + w_3,
-    \end{align*}
-    where $m = \highlightpartmath{\num{0.027} \si{kg}}$ is the mass, $g = \highlightpartmath{\num{9.81} \si{m/s^2}}$ is the gravitational acceleration, $a = \highlightpartmath{\num{0.0397} \si{m}}$ is distance from each motor pair to the center of mass of the quadrotor, and $I_{yy} = \highlightpartmath{\num{1.4e-5} \si{kg/m^2}}$ is the moment of inertia.
+    To showcase the general concept of our approach, we first consider the deliberately simple example of an electric circuit consisting of a resistance $R = \highlightpartmath{\SI{2}{\ohm}}$, a capacitor with capacity $C = \highlightpartmath{\SI{1.5}{\milli\farad}}$, and a coil with inductance $L = \highlightpartmath{\SI{2.5}{\milli\henry}}$.
 }
 
 \noindent Conveniently, the \LaTeX{} package ``siunitx'' ensures consistent formatting according to the SI standards.
-The example above shows some of the most common mistakes (in order):
-Using italics for SI units, using a dot as a multiplier between SI units, using a space between the numbers and SI units, not using scientific notation.
+The example above shows some of the most common mistakes:
+Using italics for SI units, not using a space between the numbers and SI units, not using scientific notation.
