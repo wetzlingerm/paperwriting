@@ -2,22 +2,18 @@
 \guideline[g:typography:colon_spacing]
     {Check the spacing in quantified expressions.}
 
-\goodbadexample{
-    We consider uncertain linear time-invariant systems of the form
-    \begin{align*}
-        &\dot{x}(t) = Ax(t) + u(t) \\
-        &\text{with} \quad x(0) \in \mathcal{R}_0 \subset \mathbb{R}^n,
-        \highlightpartmath{\forall t: u(t)} \in \mathcal{U} \subset \mathbb{R}^n ,
-    \end{align*}
-    where $A \in \mathbb{R}^{n \times n}$ is the system matrix, $x(t) \in \mathbb{R}^n$ is the state vector, and $u(t) \in \mathbb{R}^n$ is the input vector.
+\goodbadexample[{\cite[Sec.~2.2]{Wetzlinger2021HSCC}}]{
+    The presented techniques for automated parameter adaptation are applied to nonlinear systems
+    \begin{equation*}
+        \dot{x}(t) = f(x(t),u(t)),
+    \end{equation*}
+    where $\highlightpartmath{f: \mathbb{R} \to \mathbb{R}^n}$ is a sufficiently smooth nonlinear function, $x(t) \in \mathbb{R}^n$ is the state vector, and $u(t) \in \mathbb{R}^m$ is the input vector.
 }{
-    We consider uncertain linear time-invariant systems of the form
-    \begin{align*}
-        &\dot{x}(t) = Ax(t) + u(t) \\
-        &\text{with} \quad x(0) \in \mathcal{R}_0 \subset \mathbb{R}^n,
-        \highlightpartmath{\forall t\colon u(t)} \in \mathcal{U} \subset \mathbb{R}^n ,
-    \end{align*}
-    where $A \in \mathbb{R}^{n \times n}$ is the system matrix, $x(t) \in \mathbb{R}^n$ is the state vector, and $u(t) \in \mathbb{R}^n$ is the input vector.
+    The presented techniques for automated parameter adaptation are applied to nonlinear systems
+    \begin{equation*}
+        \dot{x}(t) = f(x(t),u(t)),
+    \end{equation*}
+    where $\highlightpartmath{f\colon \mathbb{R} \to \mathbb{R}^n}$ is a sufficiently smooth nonlinear function, $x(t) \in \mathbb{R}^n$ is the state vector, and $u(t) \in \mathbb{R}^m$ is the input vector.
 }
 
 \noindent The regular colon ``:'' is used in set builder notation as an alternative to a vertical bar and, less commonly, to express proportions.
