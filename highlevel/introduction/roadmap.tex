@@ -2,15 +2,32 @@
 \guideline[g:introduction:outline_structure]
     {Outline the structure of the paper.}
 
-% use two good/bad: one for separate paragraph, one for intertwined with contributions
-% bad: no structural overview at all (if undesired, make short or include in contributions (which are always there!))
-% however, no empty sentence ("section 4 provides numerical experiments"), rather a summary of the content of each section
-\goodbadexample{
-    ...
-}{
-    ...
+\goodexample[{\cite[Sec.~1.2]{Wetzlinger2023HSCC}}]{
+    We first introduce the general notation as well as set representations and operations \highlightpart{in Sec. 2} and formally define the problem statement \highlightpart{in Sec. 3}.
+    Afterward, we provide a comprehensive summary of the reachability algorithm in [4] for computing outer-approximations \highlightpart{in Sec. 4.1}.
+    Our contributions are as follows:
+    \begin{itemize}
+        \item First, we present a novel reachability algorithm using support functions to compute inner-approximations (\highlightpart{Sec. 4.2}).
+        \item Next, we design a fully-automated verification algorithm for the special case of unsafe sets given as halfspaces (\highlightpart{Sec. 5.1}).
+        \item Moreover, we propose a fully-automated verification algorithm for arbitrary convex unsafe sets (\highlightpart{Sec. 5.2}).
+        \item In case of a safety violation, our verification algorithms return a counterexample, which provides valuable insights to system engineers (\highlightpart{Sec. 5.1-5.2}).
+    \end{itemize}
+    Overall, our paper provides a complete description of support function reachability, combining outer- and inner-approximation with automated verification in a self-contained presentation. 
+    In contrast to previous work on reachability analysis using support functions, we provide the first approach that automatically verifies a given problem in decidable cases.
+    Finally, the practical benefits of our novel algorithms are demonstrated on several challenging benchmark problems \highlightpart{in Sec. 6}.
 }
 
-\noindent ...
-% shorter works: seamlessly integrate in list of contributions
-% for longer works, one can write a paragraph outlining the structure;
+\goodexample[{\cite{Wetzlinger2024ARCH2}}]{
+    \highlightpart{In Section 2}, we define the halfspace representation and the vertex representation.
+    Then, we introduce the object class implemented in CORA \highlightpart{in Section 3}, which also contains several set properties to improve computational efficiency.
+    Afterward \highlightpart{in Section 4}, we define all implemented operations, including conversions between representations, predicates, as well as unary and binary set operations.
+    Our numerical evaluation \highlightpart{in Section 5} compares our implementation with the multi-parametric toolbox [10].
+}
+
+\noindent 
+As shown in the first example, one can seamlessly integrate the outline of the structure into the contributions. This is recommendable for shorter works or a more compact list of contributions.
+
+The second example shows the more classical approach of using a separate paragraph for the outline of the paper.
+This is often the last paragraph of the introduction, or even a separate subsection if the introduction has subsections.
+
+For papers of short length (6 pages or less), it can sometimes be advisable to skip the structure outline and use that space in other parts of the paper.
