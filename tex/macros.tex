@@ -29,7 +29,7 @@
 \newcommand{\goodbadexample}[3][]{%
 \ifx\relax#1\relax
 \begin{tcbraster}[raster row skip=3pt,raster columns=1]
-\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+\begin{tcolorbox}[enhanced,breakable,frame hidden,interior hidden,colback=white,
     borderline west={0.75mm}{0.25mm}{color_example_bad},
     top=0mm,bottom=0mm,right=0mm,left=2.5mm]
     #2
@@ -43,7 +43,7 @@
 \else
 {\hfill \scriptsize{#1}}
 \begin{tcbraster}[raster before skip=0pt,raster row skip=3pt,raster columns=1]
-\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+\begin{tcolorbox}[enhanced,breakable,frame hidden,interior hidden,colback=white,
     borderline west={0.75mm}{0.25mm}{color_example_bad},
     top=0mm,bottom=0mm,right=0mm,left=2.5mm]
     #2
@@ -60,7 +60,7 @@
 % text example (single column)
 \newcommand{\badexample}[2][]{%
 \ifx\relax#1\relax
-\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+\begin{tcolorbox}[enhanced,breakable,frame hidden,interior hidden,colback=white,
     borderline west={0.75mm}{0.25mm}{color_example_bad},
     top=0mm,bottom=0mm,right=0mm,left=2.5mm]
     #2
@@ -68,7 +68,7 @@
 \else
 {\hfill \scriptsize{#1}}
 \begin{tcolorbox}[before skip=0pt,
-    enhanced,frame hidden,interior hidden,colback=white,
+    enhanced,breakable,frame hidden,interior hidden,colback=white,
     borderline west={0.75mm}{0.25mm}{color_example_bad},
     top=0mm,bottom=0mm,right=0mm,left=2.5mm]
     #2
@@ -77,7 +77,7 @@
 }
 \newcommand{\goodexample}[2][]{%
 \ifx\relax#1\relax
-\begin{tcolorbox}[enhanced,frame hidden,interior hidden,colback=white,
+\begin{tcolorbox}[enhanced,breakable,frame hidden,interior hidden,colback=white,
     borderline west={0.75mm}{0.25mm}{color_guideline},
     top=0mm,bottom=0mm,right=0mm,left=2.5mm]
     #2
@@ -85,7 +85,7 @@
 \else
 {\hfill \scriptsize{#1}}
 \begin{tcolorbox}[before skip=0pt,
-    enhanced,frame hidden,interior hidden,colback=white,
+    enhanced,breakable,frame hidden,interior hidden,colback=white,
     borderline west={0.75mm}{0.25mm}{color_guideline},
     top=0mm,bottom=0mm,right=0mm,left=2.5mm]
     #2
