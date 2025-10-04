@@ -17,29 +17,55 @@
 
 \maketitle
 
-% \input{frontmatter/acks.tex}
-% \input{frontmatter/preface.tex}
+\input{frontmatter/acks.tex}
+\input{frontmatter/preface.tex}
 
+%% standard table of contents
+\tableofcontents
+
+%% brief contents and standard table of contents
+% \clearpage
+
+% \setcounter{tocdepth}{0}
+% \renewcommand{\contentsname}{Brief Contents}
+% \setlength{\cftbeforepartskip}{10pt}
+% \setlength{\cftbeforechapskip}{2pt}
 % \tableofcontents
+% \setlength{\cftbeforechapskip}{3pt plus 1pt minus 1pt}
+% \setlength{\cftbeforepartskip}{10pt plus 2pt minus 2pt}
+
+% \clearpage
+
+% \setcounter{tocdepth}{1}
+% \renewcommand{\contentsname}{Contents}
+% \chapter*{\contentsname}
+% \begingroup
+%   \makeatletter
+%   \input{paperwriting_longtoc.toc} % manually copied
+%   \makeatother
+% \endgroup
+
+%% end
+
 
 %%%% MAIN %%%%
 \mainmatter
 
 %%%% GOLDEN RULE %%%%
-% \input{goldenrule.tex}
+\input{goldenrule.tex}
 
 
 %%%% HIGH LEVEL %%%%
-% \part{Organization and Structure}
+\part{Organization and Structure}
 
-% \input{highlevel/toplevel/0_toplevel.tex}
-% \input{highlevel/abstract/0_abstract.tex}
-% \input{highlevel/introduction/0_introduction.tex}
-% \input{highlevel/preliminaries/0_preliminaries.tex}
-% \input{highlevel/problemstatement/0_problemstatement.tex}
-% \input{highlevel/mainbody/0_mainbody.tex}
-% \input{highlevel/results/0_results.tex}
-% \input{highlevel/conclusion/0_conclusion.tex}
+\input{highlevel/toplevel/0_toplevel.tex}
+\input{highlevel/abstract/0_abstract.tex}
+\input{highlevel/introduction/0_introduction.tex}
+\input{highlevel/preliminaries/0_preliminaries.tex}
+\input{highlevel/problemstatement/0_problemstatement.tex}
+\input{highlevel/mainbody/0_mainbody.tex}
+\input{highlevel/results/0_results.tex}
+\input{highlevel/conclusion/0_conclusion.tex}
 
 
 %%%% LOW LEVEL %%%%
