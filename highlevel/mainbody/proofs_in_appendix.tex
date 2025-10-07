@@ -1,12 +1,26 @@
 
 \guideline[g:mainbody:proofs_appendix]
-    {Move lengthy proofs to an appendix.}
+    {Consider moving proofs to an appendix.}
 
-% EASY
-% Show how to refer to proof in appendix.
-\goodexample{
-    ...
+\goodexample[{\cite[Proposition 3 \& Appendix]{Wetzlinger2025TAC}}]{
+    \textit{Proposition 3 (Time-point AE backward reachable set)}:
+    The backward reachable set $\mathcal{R}_{\forall\exists}(-t)$ defined in (32) can be computed by
+    \begin{equation*}
+        \mathcal{R}_{\forall\exists}(-t) = e^{-At} \big( (\mathcal{X}_{\text{end}} \oplus \mathcal{Z}_{\mathcal{}W}(t)) \ominus \mathcal{Z}_{\mathcal{U}}(t) \big) .
+    \end{equation*}
+    \highlightpart{\textit{Proof:} See Appendix.}
+    \\
+    (...)
+    \highlightpart{\textit{Proof of Proposition 3:}} We have
+    \begin{align*}
+        &x_0 \in e^{-At} \big( (\mathcal{X}_{\text{end}} \oplus -\mathcal{Z}_{\mathcal{W}}(t) ) \ominus \mathcal{Z}_{\mathcal{U}}(t) \big) \\
+        &\Leftrightarrow \forall z_u \in \mathcal{Z}_\mathcal{U}(t)\colon e^{At} x_0 + z_u \in \mathcal{X}_{\text{end}} \ominus -\mathcal{Z}_{\mathcal{W}}(t) \\
+        &\Leftrightarrow \forall z_u \in \mathcal{Z}_\mathcal{U}(t) \exists z_w \in \mathcal{Z}_{\mathcal{W}}(t) \colon e^{At} x_0 + z_u + z_w \in \mathcal{X}_{\text{end}} \\
+        &\Leftrightarrow \forall u(\cdot) \in \mathbb{U} \exists w(\cdot) \in \mathbb{W}\colon \xi(t; x_0, u(\cdot), w(\cdot)) \in \mathcal{X}_{\text{end}}
+    \end{align*}
+    which is equal to the definition in (32). \hfill $\square$
 }
 
 \noindent ...
+% very simple proofs may be in main body, especially if there a few -- if there are more, better to consistently move them to an appendix
 % ensures focus on the statement, especially if the proof is technical
