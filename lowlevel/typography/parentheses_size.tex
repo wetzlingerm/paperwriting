@@ -1,24 +1,21 @@
 
-\guideline[g:references:in_environment_title]
-    {Cite the reference in the title of environments.}
+\guideline[g:typography:parentheses_size]
+    {Adjust the size of parentheses.}
 
 \goodbadexample[{\cite[Definition 3]{Wetzlinger2025TAC}}]{
-    Next, we introduce zonotopes \highlightpart{[8, Def. 1]}. \\
     \textit{Definition 3 (Zonotope):}
     Given a center $c \in \mathbb{R}^n$ and $\gamma \in \mathbb{N}$ generators stored in the columns in the generator matrix $G \in \mathbb{R}^{n \times \gamma}$, a zonotope $\mathcal{Z} \subset \mathbb{R}^n$ is
     \begin{equation*}
-        \mathcal{Z} \coloneqq \bigg\{ c + \sum_{i=1}^{\gamma} G_{(\cdot,i)} \alpha_i \, \Big| \, \alpha_i \in [-1,1] \bigg\} .
+        \mathcal{Z} \coloneqq \highlightpartmath{\{} c + \sum_{i=1}^{\gamma} G_{(\cdot,i)} \alpha_i \, \highlightpartmath{|} \, \alpha_i \in [-1,1] \highlightpartmath{\}} .
     \end{equation*}
     We use the shorthand $\mathcal{Z} = \langle c, G \rangle_Z$.
 }{
-    Next, we introduce zonotopes. \\
-    \textit{Definition 3 (Zonotope \highlightpart{[8, Def. 1]}):}
+    \textit{Definition 3 (Zonotope [8, Def. 1]):}
     Given a center $c \in \mathbb{R}^n$ and $\gamma \in \mathbb{N}$ generators stored in the columns in the generator matrix $G \in \mathbb{R}^{n \times \gamma}$, a zonotope $\mathcal{Z} \subset \mathbb{R}^n$ is
     \begin{equation*}
-        \mathcal{Z} \coloneqq \bigg\{ c + \sum_{i=1}^{\gamma} G_{(\cdot,i)} \alpha_i \, \Big| \, \alpha_i \in [-1,1] \bigg\} .
+        \mathcal{Z} \coloneqq \highlightpartmath{\bigg\{} c + \sum_{i=1}^{\gamma} G_{(\cdot,i)} \alpha_i \, \highlightpartmath{\Big|} \, \alpha_i \in [-1,1] \highlightpartmath{\bigg\}} .
     \end{equation*}
     We use the shorthand $\mathcal{Z} = \langle c, G \rangle_Z$.
 }
 
-\noindent
-...
+\noindent ...

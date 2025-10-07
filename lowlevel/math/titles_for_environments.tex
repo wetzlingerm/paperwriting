@@ -1,0 +1,18 @@
+
+\guideline[g:math:titles_for_environments]
+    {Consider giving your environments a title.}
+
+\goodexample[{\cite[Proposition 8]{Wetzlinger2023TAC}}]{
+    \textit{Proposition 8 (\highlightpart{Intersection check}):}
+    A polytope $\mathcal{P} = \langle C, d \rangle_H \subset \mathbb{R}^n$ and a constrained zonotope $\mathcal{CZ} = \langle c, G, A, b \rangle_{CZ} \subset \mathbb{R}^n$ intersect if $\nu \leq 0$ computed by the linear program
+    \begin{align*}
+        &\nu = \min_{x \in \mathbb{R}^n, \, \alpha \in \mathbb{R}^\gamma, \, \delta \in \mathbb{R}} \delta \\
+        &\hspace{42pt} \text{s.t.} ~ \forall i \in \{1,\dots,a\}\colon C_{(i,\cdot)}x - d_{(i)} \leq \delta \\
+        &\hspace{42pt} x = c + G\alpha, A\alpha = b, \alpha \in [-\mathbf{1}, \mathbf{1}].
+    \end{align*}
+    \textit{Proof:} If $\forall i \in \{1,\dots,a\}\colon C_{(i,\cdot)}x - d_{(i)} \leq \delta \leq 0$, then there exists a point $x \in \mathcal{CZ}$ that is also contained in $\mathcal{P}$.
+}
+
+\noindent ...
+% definitely in definitions, propositions, theorems; less so for assumptions, remarks, lemmas, corollaries
+% gives a purpose, lets the reader integrate the information on a higher level, also authors helps when talking about it
