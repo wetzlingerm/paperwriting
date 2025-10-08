@@ -1,12 +1,18 @@
 
 \guideline[g:results:subsections]
-    {Organize examples into separate subsections.}
+    {Organize examples into separate subsections of increasing complexity.}
 
-% EASY
-% example with introductory paragraph + headers of subsections
-\goodexample{
-    ...
+\goodexample[{\cite[Sec.~VII.A.-C.]{Wetzlinger2023TAC}}]{
+    \textit{A. Electric Circuit} \\
+    \highlightpart{To showcase the general concept of our approach, we first consider} the deliberately simple example of an electric circuit (...) \\
+    \textit{B. ARCH Benchmarks} \\
+    \highlightpart{Next, we evaluate} our verification algorithm on benchmarks from the 2021 ARCH competition [53], where state-of-the-art reachability tools compete with one another to solve challenging verification tasks.
+    We consider all linear continuous-time systems, which are (...) \\
+    \textit{C. Autonomous Car} \\
+    \highlightpart{Finally, we show} that our verification algorithm can handle complex verification tasks featuring time-varying specifications.
+    To this end, we consider the benchmark proposed in [54], where (...)
 }
 
 \noindent ...
-% roughly of equal length so that all examples are of equal importance
+% very roughly of equal length so that all examples are of equal importance
+% increasing complexity

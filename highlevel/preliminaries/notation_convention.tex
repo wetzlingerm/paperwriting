@@ -2,15 +2,20 @@
 \guideline[g:preliminaries:notation_convention]
     {Ensure your notation follows standard conventions.}
 
-% EASY
-% take some equation of preliminaries that uses these standard conventions
 % TODO: separate guideline for following wording conventions?
-% good: t for continuous time, W for a weight matrix, ...
-% bad: use other variables than the conventional ones, because they are used for specific stuff (e.g., t is ..., but time is s) 
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~II.B.]{Wetzlinger2024CSL}}]{
+    We consider autonomous nonlinear continuous-time systems
+    \begin{equation*}
+        \highlightpartmath{\dot{s}}(t) = \highlightpartmath{g}\big(\highlightpartmath{s}(t)\big) ,
+    \end{equation*}
+    where $\highlightpartmath{s} \in \mathbb{R}^n$ is the state vector and $\highlightpartmath{g}\colon \mathbb{R}^n \to \mathbb{R}^n$ is sufficiently smooth.
 }{
-    ...
+    We consider autonomous nonlinear continuous-time systems
+    \begin{equation*}
+        \highlightpartmath{\dot{x}}(t) = \highlightpartmath{f}\big(\highlightpartmath{x}(t)\big) ,
+    \end{equation*}
+    where $\highlightpartmath{x} \in \mathbb{R}^n$ is the state vector and $\highlightpartmath{f}\colon \mathbb{R}^n \to \mathbb{R}^n$ is sufficiently smooth.
 }
 
 \noindent ...
+% easier to read for the general audience if the variable have an expected meaning instead of actively translating
