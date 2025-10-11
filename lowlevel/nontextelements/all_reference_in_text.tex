@@ -2,15 +2,9 @@
 \guideline[g:nontext:refer_non_text_elements]
     {Refer to all non-text elements in the running text.}
 
-% good: "as illustrated in, ..."
-% bad: just have a figure and don't give an indication when it should be read ("belongs to the entire paragraph/section")
-\goodbadexample{
-    ...
-}{
-    ...
+\goodexample[{\cite[Sec.~VII.B.]{Wetzlinger2025TAC}}]{
+    \highlightpart{Fig. 5 shows} the time-interval AE backward reachable sets $\widehat{\mathcal{R}}_{\forall\exists}(-\tau)$ corresponding to the different values of $\zeta$ and $\varphi$, with the computation times \highlightpart{in Table II}.
 }
 
 \noindent The placement of non-text elements like figures, tables, and algorithms with respect to the running text is typically managed by \LaTeX{}, so readers often skip over them until a reference directs them to a specific element.
 Therefore, it is good practice to explicitly reference each non-text element, ideally in a separate paragraph explaining its content.
-% An alternative formulation to this guideline is:
-% ``Only use environments if they are referenced at least once later.''

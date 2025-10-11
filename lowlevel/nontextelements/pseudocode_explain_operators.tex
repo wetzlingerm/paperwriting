@@ -2,11 +2,12 @@
 \guideline[g:nontext:pseudocode_explain_operators]
     {Pseudocode: Ensure that all operators are explained or referenced.}
 
-% same example, bad one relies on "context understanding", good one explicitly explains the operators
-\goodbadexample{
-    ...
-}{
-    ...
+\goodexample[Adapted from {\cite[Sec.~2]{Wetzlinger2021HSCC}}]{
+    The operations $\highlightpartmath{\textsc{center}(\mathcal{S})}$, $\textsc{box}(\mathcal{S})$, and $\textsc{vol}(\mathcal{S})$ return the \highlightpart{geometric center}, the smallest box over-approximation, and the volume of a set $\mathcal{S} \subset \mathbb{R}^n$, respectively. (...) \\
+    (...) \\
+    At the start of each step $k$ (Line 4), \highlightpart{the operation $\textsc{taylor}$ evaluates the Taylor terms of the nonlinear dynamics (4) at the linearization point $z^*$}. (...) \\
+
+    \input{data/algorithm_operators.tex}
 }
 
 \noindent Since pseudocode aims to be concise, it's often better to use named operations rather than detailing every computation, especially for standard tasks, e.g., sorting.

@@ -2,10 +2,12 @@
 \guideline[g:results:same_machine]
     {If possible, run all evaluations on the same machine.}
 
-% EASY
 \goodexample[{\cite[Sec.~V.]{Wetzlinger2024CSL}}]{
-    ...
+    We demonstrate the \highlightpart{performance of Algorithm 1}, implemented in the MATLAB toolbox CORA [26], on several benchmarks and \highlightpart{compare it to the scaling approach} [10], implemented also in CORA, \highlightpart{and the projection approach} [5], implemented in the C++ toolbox RINO [6].
+    \highlightpart{All computations} are performed on a 2.60GHz i7 processor with 32GB memory.
 }
 
 \noindent
-...
+If timing is relevant, running all evaluations on the same machine ensures a level playing field for comparison between approaches.
+System specifications can significantly impact the timings, so keeping them consistent helps isolate differences in performance.
+Of course, this may not be possible if the code for certain approaches is not available.

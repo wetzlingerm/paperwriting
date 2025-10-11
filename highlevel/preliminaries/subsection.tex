@@ -1,15 +1,19 @@
 
 \guideline[g:preliminaries:subsections]
-    {Organize the topics into separate subsections.}
+    {Organize different topics into separate subsections.}
 
-% EASY
-% good: use example with A, B
-% bad: no subsections or other structural separation
-% usually, topics are disjoint enough so that there is no real good transition
-\goodbadexample{
-    ...
-}{
-    ...
+\goodexample[{\cite[Sec.~II.]{Wetzlinger2025TAC}}]{
+    II. Preliminaries \\
+    We introduce some general notation, basics of set-based arithmetic, and fundamentals on forward reachability analysis required for the main body of this article. \\
+    \highlightpart{\textit{A. Notations}} \\
+    The set of real numbers is denoted by $\mathbb{R}$, the set of natural numbers without zero is denoted by $\mathbb{N}$, and the subset $\{a, a+1, \dots, b\} \subset \mathbb{N}$ for $0 < a < b$, is denoted by $\mathbb{N}_{[a,b]}$.
+    (...) \\
+    \highlightpart{\textit{B. Set-Based Arithmetic}} \\
+    For convex sets $\mathcal{S}_1, \mathcal{S}_2 \subset \mathbb{R}^n$ as well as a matrix $M \in \mathbb{R}^{m \times n}$, we formally define (...) \\
+    \highlightpart{\textit{C. Forward Reachable Set Computation}} \\
+    For an LTI system of the form $\dot{x}(t) = Ax(t) + u(t)$, let the solution trajectory at time $t \in \mathbb{R}$ (...)
 }
 
-\noindent ...
+\noindent
+Subsections provide a natural break between topics, removing the need for a smooth transition between paragraphs. This are especially useful when there isn't a clear or logical connection between topics.
+A separate subsection for the notation is optional.
