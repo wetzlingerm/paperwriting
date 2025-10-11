@@ -1,0 +1,22 @@
+% \begin{small}
+% Table 2: Comparing our approach with different reachability tools on ARCH benchmarks using the computation time (in $\SI{}{\second})$ and the tightness measurements $\mu_1 = \textsc{vol}(\textsc{box}(\mathcal{R}(t_\text{end})))$, $\mu_2 = l_4$, where $l = d(\textsc{box}(\mathcal{R}(t_\text{end})))$ as in [26].
+% \end{small}
+
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{l  c c  c  c c}
+ \toprule
+ \multirow{2}{*}{\textbf{Tool} (Language)} & \multicolumn{2}{c}{\textbf{PRDE20}} & & \multicolumn{2}{c}{\textbf{LALO20}} \\ \cmidrule{2-3} \cmidrule{5-6}
+  & Time & $\mu_1$ & & Time & $\mu_2$ \\ \midrule
+ Linearization approach (Matlab)		& $7.0$ 	& $8.0$e$-21$ & & $8.9$ 	& $0.045$ \\
+ Polynomialization approach	(Matlab)	& $6.5$ 	& $1.0$e$-19$ & & $19$      & $0.025$ \\ \midrule
+ Ariadne (C++)				            & $8.6$ 	& $1.7$e$-13$ & & $664$ 	& $0.058$ \\
+ CORA (Matlab)				            & $16$ 	    & $1.2$e$-21$ & & $7.6$ 	& $0.04$ \\
+ DynIbex (C++)				            & $12$ 	    & $3.9$e$-17$ & & $27$ 	    & $0.40$ \\
+ Flow* (C++)				            & $4.1$ 	& $8.0$e$-21$ & & $2.3$ 	& $0.06$ \\
+ Isabelle/HOL (SML)			            & $11$ 	    & $3.3$e$-20$ & & $13$ 	    & $0.48$ \\
+ JuliaReach (Julia)			            & $1.5$ 	& $3.3$e$-20$ & & $1.5$ 	& $0.017$ \\
+\bottomrule 
+\end{tabular}
+\end{footnotesize}
+\end{center}
