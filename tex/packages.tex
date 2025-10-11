@@ -36,11 +36,13 @@
 	myarrow/.style={<-, shorten <=0.05cm, >=stealth', semithick}
 }
 
-\usepackage{enumitem}
+\usepackage{enumitem}  % lists (currently, modifying items)
+
+\usepackage{algpseudocode}  % algorithmic environment
 
 \usepackage{booktabs}  % tables
 \usepackage{multirow}  % tables
-\usepackage{longtable}  % for table of references for guidelines
+% \usepackage{longtable}  % for table of references for guidelines
 
 \usepackage{soul}  % for highlighting multiline text
 
@@ -56,8 +58,8 @@
 \fancyfoot[R]{}
 
 % glossary / list of terms
-\usepackage[nopostdot]{glossaries}
-\input{tex/glossaryentries.tex}
+% \usepackage[nopostdot]{glossaries}
+% \input{tex/glossaryentries.tex}
 %% \setglossarystyle{list}
 %% \makeglossaries
 

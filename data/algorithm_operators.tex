@@ -1,0 +1,12 @@
+\textbf{Algorithm 1} ~ Reachability analysis of nonlinear systems using state-space abstraction. \\
+\textbf{Input:} Nonlinear system $f(z)$, initial set $\mathcal{R}(t_0) = \mathcal{X}_0$, input set $\mathcal{U}$, time horizon $t_{\text{end}}$
+
+\textbf{Output:} Outer approximation of the reachable set $\mathcal{R}([0,t_{\text{end}}])$
+
+\begin{algorithmic}[1]
+	\State $k \gets 0, t_k \gets 0$
+	\State \textbf{while} $t_k < t_{\text{end}}$ \textbf{do}
+	\State $\quad$ $z^*(t_k) \gets \highlightpartmath{\textsc{center}(\mathcal{R}(t_k))}$
+	\State $\quad$ $w, A, B, D, \ldots \gets \highlightpartmath{\textsc{taylor}\big(f(z), z^*(t_k)\big)}$
+	\State (...)
+\end{algorithmic}
