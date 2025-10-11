@@ -3,7 +3,7 @@
     {Provide all data required for running the numerical experiments.}
 
 \goodexample[{\cite[Sec.~VII.A.]{Wetzlinger2025TAC}}]{
-    To showcase the general concept of our approach, we first consider the deliberately simple example of an electric circuit consisting of a resistance $R = \SI{2}{\ohm}$, a capacitor with capacity $C = \SI{1.5}{\milli\farad}$, and a coil with inductance $L = \SI{2.5}{\milli\henry}$:
+    To showcase the general concept of our approach, we first consider the deliberately simple example of an electric circuit consisting of a resistance $\highlightpartmath{R = \SI{2}{\ohm}}$, a capacitor with capacity $\highlightpartmath{C = \SI{1.5}{\milli\farad}}$, and a coil with inductance $\highlightpartmath{L = \SI{2.5}{\milli\henry}}$:
     \begin{equation*}
         \begin{pmatrix} \dot{u}_C(t) \\ \dot{i}_L(t) \end{pmatrix}
         =
@@ -13,7 +13,7 @@
         \begin{pmatrix} 0 \\ \frac{1}{L} \end{pmatrix} u_I(t)
     \end{equation*}
     where the state is defined by the voltage at the capacitor $u_C(t)$ and the current at the coil $i_L(t)$.
-    The initial set is $\mathcal{X}^0 = [1, 3]\SI{}{\volt} \times [3, 5] \SI{}{\ampere}$, the input voltage to the circuit $u_I(t)$ is uncertain within the set $\mathcal{U} = [-0.1, 0.1] \SI{}{\volt}$, and the time horizon is $t_{\text{end}} = \SI{2}{\second}$.
+    The initial set is $\highlightpartmath{\mathcal{X}^0 = [1, 3]\SI{}{\volt} \times [3, 5] \SI{}{\ampere}}$, the input voltage to the circuit $u_I(t)$ is uncertain within the set $\highlightpartmath{\mathcal{U} = [-0.1, 0.1] \SI{}{\volt}}$, and the time horizon is $\highlightpartmath{t_{\text{end}} = \SI{2}{\second}}$.
 }
 
 \noindent
