@@ -1,0 +1,29 @@
+\begin{small}
+Table I: Runtime complexity of set operations for $n$-dimensional sets: \highlightpart{The polytope $\mathcal{P}$ has $h \geq n \in \mathbb{N}$ constraints, the constrained zonotope $\mathcal{CZ}$ and the zonotope $\mathcal{Z}$ have $\gamma \geq n \in \mathbb{N}$ generators, $\ell \in \mathbb{R}^n$ is a vector, and $\textsc{SF}(\mathcal{S})$ denotes the runtime complexity to evaluate $\rho(\mathcal{S},\ell)$.}
+\end{small}
+
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{l l c l l}
+	\toprule
+	\textbf{Operation} & \textbf{Complexity} & & \textbf{Operation} & \textbf{Complexity} \\ \cmidrule{1-2} \cmidrule{4-5}
+	$M \mathcal{P}$ & $\mathcal{O}(hn^2)$
+		& & $\mathcal{Z}_1 \oplus \mathcal{Z}_2$ & $\mathcal{O}(n)$ \\
+	$M\mathcal{Z}$ & $\mathcal{O}(n^2\gamma)$
+	    & & $\mathcal{CZ}_1 \! \oplus \mathcal{CZ}_2$ & $\mathcal{O}(n)$ \\
+	$M \mathcal{CZ}$ & $\mathcal{O}(n^2\gamma)$
+		& & $\mathcal{P} \ominus \mathcal{S}$ & $\mathcal{O}(h \textsc{SF}(\mathcal{S}))$ \\
+	$\mathbf{M} \mathcal{Z}$ & $\mathcal{O}(n^2\gamma)$
+	    & & $\mathcal{S} \subseteq \mathcal{P}$ & $\mathcal{O}(h \textsc{SF}(\mathcal{S}))$ \\
+	$\mathbf{M}\mathcal{CZ}$ & $\mathcal{O}(n^2\gamma)$
+	    & & $\mathcal{CZ} \cap \mathcal{P}$ & $\mathcal{O}(h\gamma^{3.5})$ \\
+	$\rho(\mathcal{P},\ell)$ & $\mathcal{O}(h^{3.5})$
+	    & & $\textsc{conv}(\mathcal{CZ}_1,\mathcal{CZ}_2)$ & $\mathcal{O}(n)$ \\
+	$\rho(\mathcal{Z},\ell)$ & $\mathcal{O}(n\gamma)$
+		& & $\textsc{box}(\mathcal{P})$ & $\mathcal{O}(nh^{3.5})$ \\
+	$\rho(\mathcal{CZ},\ell)$ & $\mathcal{O}(\gamma^{3.5})$
+		& & $\textsc{CZ}(\mathcal{P})$ & $\mathcal{O}(nh^{3.5})$ \\
+	\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{center}

@@ -1,0 +1,35 @@
+\begin{tikzpicture}[every node/.style={font=\small, align=left}]
+	% bounding box, grid
+	%\draw[red] (0,0) rectangle (8.8,4);
+	%\draw[red] (0,0.3) grid (8.8,3.6);
+	
+	% start set
+	\draw (0.15,0.3) rectangle (1.15,1.35);
+	\draw[myarrow] (0.65,1.35) -- ++(0,1.2) node[above] {Initial \\ set $\mathcal{X}_0$};
+	
+	% indication of first step
+	\draw[myarrow,dotted] (2.8,0.9) .. controls (2.0,0.65) and (1.6,0.65) .. (1.25,0.85);
+	\node[anchor=west] at (1.3,0.45) {Time step};
+	
+	% non-convex exact reachable set (solid)
+	%	\draw[rounded corners=8pt,xshift=7cm,yshift=2cm,rotate=0]   (-1.2,-0.9) -- (0,-0.4) -- (1.2,-0.7) -- (1.0,0.9) -- (-1.0,0.6) -- cycle;
+	\draw[rounded corners=8pt,xshift=3cm,yshift=2cm,rotate=-30] (-1.2,-1.0) -- (0,-0.45) -- (1.3,-0.8) -- (1.0,0.9) -- (-1.0,0.6) -- cycle;
+	\draw[myarrow] (4.2,2.225) -- ++(0.6,0.3) node[right]
+		{Exact reachable set $\mathcal{R}$};
+	
+	% reachable set of the linearized dynamics (dashed)
+	\draw[dashed,xshift=3cm,yshift=2cm,rotate=-30] (-1.2,-0.7) rectangle (1.2,0.7);
+	\draw[myarrow] (4.35,1.9) -- ++(0.45,-0.225) node[right] 
+		{Reachable set for the \\ affine dynamics $\mathcal{R}_{\text{aff}}$};
+	
+	% outer approximation (more complex representation)
+	\draw[xshift=3cm,yshift=2cm,rotate=-30] (-1.5,-1) rectangle (1.5,1);
+	\draw[myarrow] (3.8,2.7) -- ++(1.0,0.5) node[right]
+		{Outer approximation of the \\ reachable set $\widehat{\mathcal{R}} = \mathcal{R}_{\text{aff}} \oplus \mathcal{R}_{\text{err}}$};
+	
+	% inner approximation (also only parallelotope)
+	\draw[xshift=3cm,yshift=2cm,rotate=-30] (-0.7,-0.4) rectangle (0.7,0.4);
+	\draw[myarrow] (3.5,1.4) -- ++(1.3,-0.65) node[right] 
+		{Inner approximation of the \\ reachable set $\widecheck{\mathcal{R}} = \mathcal{R}_{\text{aff}} \oplus \mathcal{R}_{\text{err}}$};
+	
+\end{tikzpicture}

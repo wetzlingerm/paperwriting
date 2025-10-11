@@ -1,0 +1,24 @@
+\begin{small}
+Table I: Comparison of Algorithm 1 with the approaches [5], [10] in terms of computation time (in $\SI{}{\second}$) and tightness metric $\gamma_{\min}(t_{\normalfont\text{end}})$ (26).
+\end{small}
+
+\smallskip
+
+\begin{footnotesize}
+\begin{tabular}{l c c c c c c c c c}
+    \toprule
+    \multirow{2}{*}{\textbf{Benchmark}} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$t_{\text{end}}$} & \multirow{2}{*}{$\mathcal{X}_0$} & \multicolumn{2}{c}{\textbf{Algorithm 1}} & \multicolumn{2}{c}{\textbf{Scaling approach~[10]}} & \multicolumn{2}{c}{\textbf{Projection approach~[5]}} \\
+    & & & & Time & $\gamma_{\min}(t_{\text{end}})$ & Time & $\gamma_{\min}(t_{\text{end}})$ & Time & $\gamma_{\min}(t_{\text{end}})$ \\ \midrule
+    Jet Engine~[27, Eq. (19)] & $2$ & $4$ & [28, Ex. 3.3.9]
+    & $\mathbf{3.9}$ & $\mathbf{0.7769}$ & $40$ & $0.6093$ & $16.4$ & $0$ \\
+    Higgins-Selkov~[19, Ex. II.1.] & $2$ & $3$ & [19, Ex. II.1.]
+    & $\mathbf{2.5}$ & $\mathbf{0.8505}$ & $57$ & $0.5896$ & $10$ & $0.8127$ \\
+    Rössler~[30, Eq. (2)] & $3$ & $1.5$ & [28, Ex. 3.4.3]
+    & $\mathbf{1.1}$ & $\mathbf{0.7335}$ & $32$ & $0.7137$ & $2.3$ & $0.3089$ \\
+    Lotka-Volterra~[31, Eq. (1)] & $5$ & $1$ & [28, Ex. 5.2.3]
+    & $\mathbf{0.99}$ & $0.7711$ & $238$ & $\mathbf{0.8240}$ & $7.8$ & $0.7884$ \\
+    Biological model~[32] & $7$ & $0.2$ & [28, Ex. 5.2.4]
+    & $\mathbf{0.59}$ & $0.7540$ & $82$ & $0.8760$ & $2.2$ & $\mathbf{0.9811}$ \\
+    \bottomrule
+\end{tabular}
+\end{footnotesize}
