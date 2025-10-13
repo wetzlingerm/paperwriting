@@ -1,0 +1,32 @@
+
+\guideline[g:typography:multiline_equations]
+    {Vertically align relational operators in multiline right-hand sides.}
+
+\goodbadexample[{\cite[Appendix]{Wetzlinger2025TAC}}]{
+    We insert this in (57) to obtain
+    \begin{align*}
+        &\mathcal{S}_2
+        \overset{(58)}{\highlightpartmath{\subseteq}}
+        \big( \widehat{\mathcal{R}}_\exists (-\tau_0; u_0) \cup \dots 
+            \cup \widehat{\mathcal{R}}_\exists (-\tau_{\sigma-1}; u_0) \big) \\
+        &\highlightpartmath{\cap} \; \langle N, p^{(1)} \rangle_H \cap \dots \cap \langle N, p^{(q)} \rangle_H \\
+        &\highlightpartmath{=} \big( \widehat{\mathcal{R}}_\exists (-\tau_0; u_0) \cup \dots 
+            \cup \widehat{\mathcal{R}}_\exists (-\tau_{\sigma-1}; u_0) \big) \cap \langle N, p \rangle_H .
+    \end{align*}
+}{
+    We insert this in (57) to obtain
+    \begin{align*}
+        \mathcal{S}_2
+        \overset{(58)}&{\highlightpartmath{\subseteq}}
+        \big( \widehat{\mathcal{R}}_\exists (-\tau_0; u_0) \cup \dots 
+            \cup \widehat{\mathcal{R}}_\exists (-\tau_{\sigma-1}; u_0) \big) \\
+        &\qquad \highlightpartmath{\cap} \; \langle N, p^{(1)} \rangle_H \cap \dots \cap \langle N, p^{(q)} \rangle_H \\
+        &\highlightpartmath{=} \, \big( \widehat{\mathcal{R}}_\exists (-\tau_0; u_0) \cup \dots 
+            \cup \widehat{\mathcal{R}}_\exists (-\tau_{\sigma-1}; u_0) \big) \cap \langle N, p \rangle_H .
+    \end{align*}
+}
+
+\noindent 
+Maintaining vertical alignment of relational operators enhances the readability of expressions.
+If a line exceeds the right margin, indent the continuation line to indicate that it follows from the previous one. 
+This guideline may be relaxed for formatting considerations, such as preventing awkward line breaks.

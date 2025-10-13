@@ -2,25 +2,19 @@
 \guideline[g:math:footnotes_after_variables]
     {Avoid placing footnote marks after variables.}
 
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~4.1]{Wetzlinger2024ARCH2}}]{
+    (...) which implements the Quickhull algorithm [20] to efficiently check the redundancy of each point, with a polynomial complexity of $\mathcal{O}(\frac{m}{r} f_r)$\highlightpart{\textsuperscript{2}} with respect to (...) \\
+    \smallskip
+    \begin{footnotesize}% <-- important!
+    \textsuperscript{2}Please note that the conditions for balanced execution [20, Def. 3.1] must hold.
+    \end{footnotesize}
 }{
-    ...
+    (...) which implements the Quickhull algorithm [20] to efficiently check the redundancy of each point, with a polynomial complexity\highlightpart{\textsuperscript{2}} of $\mathcal{O}(\frac{m}{r} f_r)$ with respect to (...) \\
+    \smallskip
+    \begin{footnotesize}% <-- important!
+    \textsuperscript{2}Please note that the conditions for balanced execution [20, Def. 3.1] must hold.
+    \end{footnotesize}
 }
-% \goodbadexample{
-%     Once the trajectory $x$ violates the rule \highlightpart{$\phi^3$}, our repairer aims to solve: (...) \smallskip
-
-%     \textsuperscript{3}\begin{footnotesize}%
-%     Multiple violated rules are conjoined by $\phi = \bigwedge_{v=1}^{n_v} \phi_v$.
-%     \end{footnotesize}
-% }{
-%     Once the trajectory $x$ violates the rule \highlightpart{$\phi$}, our repairer aims to solve\highlightpart{\textsuperscript{3}}: (...) \smallskip
-
-%     \textsuperscript{3}\begin{footnotesize}%
-%     Multiple violated rules are conjoined by $\phi = \bigwedge_{v=1}^{n_v} \phi_v$.
-%     \end{footnotesize}
-% }
-% TODO: Come up with new example
 
 \noindent Importantly, footnote marks can be confused with exponentiation.
-Although this may not be a mathematical issue---in the context of the above example, the ``exponentiation of a rule'' would be undefined---, it is still visually misleading.
+Although this may sometimes not be a mathematical issue, it is still visually misleading.
