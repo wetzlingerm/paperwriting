@@ -28,14 +28,12 @@
 \usepackage{siunitx}  % for SI units guideline
 
 \usepackage{xcolor}  % customized colors
-\usepackage[most]{tcolorbox}  % for guidelines and examples
+\usepackage[most]{tcolorbox}  % for guidelines and examples, loads tikz
 \tcbuselibrary{skins}  % enhanced formatting for tcolorbox
 \tcbuselibrary{raster}  % for good/bad examples
 
+\usepackage{pgfplots}
 \usetikzlibrary{arrows}
-\tikzset{
-	myarrow/.style={<-, shorten <=0.05cm, >=stealth', semithick}
-}
 
 \usepackage{enumitem}  % lists (currently, modifying items)
 

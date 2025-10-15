@@ -2,19 +2,20 @@
 \guideline[g:introduction:outline_structure]
     {Outline the structure of the paper.}
 
-\goodexample[{\cite[Sec.~1.2]{Wetzlinger2023HSCC}}]{
-    We first introduce the general notation as well as set representations and operations \highlightpart{in Sec. 2} and formally define the problem statement \highlightpart{in Sec. 3}.
-    Afterward, we provide a comprehensive summary of the reachability algorithm in [4] for computing outer-approximations \highlightpart{in Sec. 4.1}.
-    Our contributions are as follows:
-    \begin{itemize}
-        \item First, we present a novel reachability algorithm using support functions to compute inner-approximations (\highlightpart{Sec. 4.2}).
-        \item Next, we design a fully-automated verification algorithm for the special case of unsafe sets given as halfspaces (\highlightpart{Sec. 5.1}).
-        \item Moreover, we propose a fully-automated verification algorithm for arbitrary convex unsafe sets (\highlightpart{Sec. 5.2}).
-        \item In case of a safety violation, our verification algorithms return a counterexample, which provides valuable insights to system engineers (\highlightpart{Sec. 5.1-5.2}).
-    \end{itemize}
-    Overall, our paper provides a complete description of support function reachability, combining outer- and inner-approximation with automated verification in a self-contained presentation. 
-    In contrast to previous work on reachability analysis using support functions, we provide the first approach that automatically verifies a given problem in decidable cases.
-    Finally, the practical benefits of our novel algorithms are demonstrated on several challenging benchmark problems \highlightpart{in Sec. 6}.
+\goodexample[{\cite[Sec.~I.]{Wetzlinger2025TAC}}]{
+    In this article, we compute minimal and maximal backward reachable sets for continuous-time linear time-invariant (LTI) systems.
+    As there are many similar definitions of backward reachable sets as well as related concepts, we postpone the literature review to \highlightpart{Section IV}.
+    This allows us to use the preliminary information from \highlightpart{Sections II and III} for a more concise overview.
+    Our contributions are as follows.
+    \begin{enumerate}
+        \item An inner and outer approximation of the time-point minimal backward reachable set (\highlightpart{see Section V-A}).
+        \item An outer approximation of the time-interval minimal backward reachable set (\highlightpart{see Section V-B}).
+        \item An inner and outer approximation of the time-point maximal backward reachable set (\highlightpart{see Section VI-A}).
+        \item An inner approximation of the time-interval maximal backward reachable set (\highlightpart{see Section VI-B}).
+    \end{enumerate}
+    Crucially, all proposed algorithms scale only polynomially with respect to the state dimension.
+    In addition, we discuss the approximation errors of each computed set.
+    Our evaluation \highlightpart{in Section VII} is followed by closing remarks \highlightpart{in Section VIII}.
 }
 
 \goodexample[{\cite[Sec.~1]{Wetzlinger2024ARCH2}}]{
