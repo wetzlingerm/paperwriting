@@ -1,4 +1,7 @@
-\begin{tikzpicture}[every node/.style={font=\small, align=left}]
+\begin{tikzpicture}[
+	every node/.style={font=\small, align=left},
+	myarrow/.style={<-, shorten <=0.05cm, >=stealth', semithick}
+	]
 	% bounding box, grid
 	%\draw[red] (0,0) rectangle (8.8,4);
 	%\draw[red] (0,0.3) grid (8.8,3.6);

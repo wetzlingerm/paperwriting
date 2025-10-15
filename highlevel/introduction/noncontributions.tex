@@ -1,16 +1,30 @@
 
 \guideline[g:introduction:noncontributions]
-    {Avoid mentioning methods and code releases as contributions.}
+    {Avoid mentioning experiments and code releases as contributions.}
 
-% EASY
-% bad: separate bullet points for experiments -> better: mention in roadmap
-% bad: selling methods that already exist as contribution because you use them for a new problem
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~1.2]{Wetzlinger2023HSCC}}]{
+    Our contributions are as follows:
+    \begin{itemize}
+        \item First, we present a novel reachability algorithm using support functions to compute inner-approximations (Sec. 4.2).
+        \item Next, we design a fully-automated verification algorithm for the special case of unsafe sets given as halfspaces (Sec. 5.1).
+        \item Moreover, we propose a fully-automated verification algorithm for arbitrary convex unsafe sets (Sec. 5.2).
+        \item In case of a safety violation, our verification algorithms return a counterexample, which provides valuable insights to system engineers (Sec. 5.1-5.2).
+        \item \highlightpart{The practical benefits of our novel algorithms are demonstrated on several challenging benchmark problems (Sec. 6)}.
+    \end{itemize}
+    Overall, our paper (...)
 }{
-    ...
+    Our contributions are as follows:
+    \begin{itemize}
+        \item First, we present a novel reachability algorithm using support functions to compute inner-approximations (Sec. 4.2).
+        \item Next, we design a fully-automated verification algorithm for the special case of unsafe sets given as halfspaces (Sec. 5.1).
+        \item Moreover, we propose a fully-automated verification algorithm for arbitrary convex unsafe sets (Sec. 5.2).
+        \item In case of a safety violation, our verification algorithms return a counterexample, which provides valuable insights to system engineers (Sec. 5.1-5.2).
+    \end{itemize}
+    Overall, our paper (...)
+    \highlightpart{Finally, the practical benefits of our novel algorithms are demonstrated on several challenging benchmark problems in Sec. 6}.
 }
 
-\noindent ...
-% what is a method: "we use X to do Y"... there must be more to it than just "i did it differently"
-% put "we provide code" immediately after the contributions
+\noindent
+The contributions highlight how your work advances the current state of the art and are closely tied to the main content of the paper.
+Experiments serve primarily to validate these contributions, while code releases provide a public implementation of them.
+As such, it's best to present experiments and code separately from the contributions themselves.

@@ -9,7 +9,6 @@
 \definecolor{color_example_good}{HTML}{228B22}
 \definecolor{color_example_bad}{HTML}{B22222}
 
-
 % guidelines
 \newcounter{guidelinecounter}
 \newcommand{\guideline}[3][defaultguidelinelabel]{%
@@ -119,3 +118,6 @@
 	{\ooalign{\box\tw@ \cr \box\z@}}}
 \makeatother
 \newcommand{\widecheck}[1]{\,\widecheckinternal{\kern -2pt #1}}
+
+% indication of sections
+\newcommand{\location}[1]{\begin{footnotesize} (\textsc{#1}) \end{footnotesize}}
