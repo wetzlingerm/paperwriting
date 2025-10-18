@@ -1,0 +1,12 @@
+\algruletop{}
+\textbf{Algorithm 1} ~ Conversion: Polytope to constrained zonotope. \\
+\textbf{Input:} Polytope $\mathcal{P} = \langle H, d \rangle_P$ \\
+\textbf{Output:} Constrained zonotope $\mathcal{CZ} = \langle c, G, K, l \rangle_{CZ}$
+
+\begin{algorithmic}[1]
+	\State $\langle c, G \rangle_Z \gets \textsc{box}( \mathcal{P} )$
+    \State $\forall j \in \mathbb{N}_{[1,...,h]}\colon o_{(j)} \gets -\rho\big( \langle c, G \rangle_Z,-H_{(j,\cdot)}^\top \big)$
+    \State $G \gets [G \;\, \mathbf{0}]$, $K \gets [H G \;\, \tfrac{1}{2}\mathrm{diag}(o - d)]$, $l \gets \tfrac{1}{2}(d+o) - Hc$
+    \State $\mathcal{CZ} \gets \langle c, G, K, l \rangle_{CZ}$
+\end{algorithmic}
+\algrulebottom{}

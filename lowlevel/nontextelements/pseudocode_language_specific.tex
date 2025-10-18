@@ -3,19 +3,9 @@
     {Avoid language-specific functions in pseudocode.}
 
 \goodbadexample{
-    \textbf{Algorithm 1.} A good algorithm. \\
-    Input: Matrix $G$, (...) \\
-    Output: (...) \\
-    \begin{scriptsize}
-        1:
-    \end{scriptsize}
-    $m \gets \highlightpartmath{\textsc{shape}(G,2)}$ \\
-    (...)
+    \input{data/algorithm_language_specific_bad.tex}
 }{
-    \textbf{Algorithm 1.} A good algorithm. \\
-    Input: Matrix $G \in \mathbb{R}^{n \times \highlightpartmath{m}}$, (...) \\
-    Output: (...) \\
-    (...)
+    \input{data/algorithm_language_specific_good.tex}
 }
 
 \noindent Using language-specific functions may hinder understanding across diverse audiences, as some readers may not be familiar with any given programming language.

@@ -2,10 +2,64 @@
 \guideline[g:universals:outline]
     {Outline the content using headings and keyphrases.}
 
-% EASY
-% List with section headings (appropriate indentation) + keyphrases for content in each paragraph
-\goodexample[{\cite{Wetzlinger2024CSL}}]{
-    ...
+\goodexample[{Adapted from \cite{Wetzlinger2024CSL}}]{
+    % \textit{Title.} Inner Approximations of Reachable Sets for Nonlinear Systems Using the Minkowski Difference \\
+    % \textit{Abstract + Index Terms} \\
+    \textit{I. Introduction}
+    \begin{itemize}
+        \item Motivation: reachability analysis and inner approximations
+        \item Related work: approaches based on outer approximations, Hamilton-Jacobi reachability, dissipativity-based approaches
+        \item Contributions: summary of main idea, incl. figure
+    \end{itemize}
+    \textit{II. Preliminaries and Problem Statement} \\
+    \textit{A. Notation and Set Operations}
+    \begin{itemize}
+        \item Vectors, matrices, sets (exact/outer/inner), linear programs
+        \item Center, box, convex hull, Minkowski sum/difference
+    \end{itemize}
+    \textit{B. Problem Statement}
+    \begin{itemize}
+        \item Autonomous nonlinear continuous-time systems
+        \item Definition: exact reachable set
+        \item Goal: compute an inner approximation
+    \end{itemize}
+    \textit{III. Reachability Analysis} \\
+    \textit{A. Set-Based Integration}
+    \begin{itemize}
+        \item Taylor expansion with Lagrange remainder
+        \item Integration of resulting linear differential inclusion
+        \item Time-point and time-interval reachable set
+    \end{itemize}
+    \textit{B. Computation of an Inner Approximation}
+    \begin{itemize}
+        \item Lemma: Minkowski difference for special case
+        \item Propositions: Inner approximation of time-point and time-interval reachable set
+    \end{itemize}
+    \textit{IV. Polynomial-Time Implementation} \\
+    \textit{A. Set Representations and Operations}
+    \begin{itemize}
+        \item Definitions: support function, polytope, (constrained) zonotope
+        \item Time complexity of operations used in reachability algorithm
+    \end{itemize}
+    \textit{B. Reachability Algorithm}
+    \begin{itemize}
+        \item Full algorithm + walkthrough + time complexity
+    \end{itemize}
+    \textit{V. Numerical Examples}
+    \begin{itemize}
+        \item Table: Benchmarks and results (comparison)
+        \item Discuss computation time and tightness
+        \item Figure: Selected benchmark with tightness over time
+    \end{itemize}
+    \textit{VI. Conclusion}
+    \begin{itemize}
+        \item Summary
+        \item Future work: non-autonomous nonlinear systems
+    \end{itemize}
 }
 
-\noindent ...
+\noindent 
+Focus on the overall structure of the paper rather than specific details---there's no need to list references in the related work or write out equations.
+Some content may already take shape as propositions, tables, or figures, which can be included in the outline.
+A clear outline helps maintain focus on the main contributions and prevents getting lost in minor details.
+Keep in mind that the outline is not fixed and will likely evolve as the writing progresses.

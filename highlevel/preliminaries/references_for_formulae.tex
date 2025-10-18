@@ -2,16 +2,15 @@
 \guideline[g:preliminaries:references]
     {Provide references for formulae.}
 
-% TODO: cite!
-\goodbadexample{
-    We compute an outer approximation of the particular solution by \highlightempty{}
+\goodbadexample[{\cite[Sec.~III.]{Wetzlinger2023TAC}}]{
+    The particular solution due to the time-varying input within the set $\mathcal{U}_0$ can be enclosed by \highlightempty{}
     \begin{equation*}
-        \mathcal{P} = \bigoplus_{i=0}^\infty \frac{A^i \Delta t^{i+1}}{(i+1)!} \, \mathcal{U} .
+        \widehat{\mathcal{P}}^\mathcal{U}(\Delta t) = \bigoplus_{i=0}^\eta \frac{A^i \Delta t^{i+1}}{(i+1)!} \, \mathcal{U}_0 \mathbf{E}(\Delta t, \eta) \Delta t \mathcal{U}_0 .
     \end{equation*}
 }{
-    We compute an outer approximation of the particular solution by \highlightpart{[1, Eq.~(1)]}
+    The particular solution due to the time-varying input within the set $\mathcal{U}_0$ can be enclosed by \highlightpart{[12, Eq.~(3.7)]}
     \begin{equation*}
-        \mathcal{P} = \bigoplus_{i=0}^\infty \frac{A^i \Delta t^{i+1}}{(i+1)!} \, \mathcal{U} .
+        \widehat{\mathcal{P}}^\mathcal{U}(\Delta t) = \bigoplus_{i=0}^\eta \frac{A^i \Delta t^{i+1}}{(i+1)!} \, \mathcal{U}_0 \mathbf{E}(\Delta t, \eta) \Delta t \mathcal{U}_0 .
     \end{equation*}
 }
 
