@@ -3,10 +3,18 @@
     {Figures: Use the same font and font sizes as in the running text.}
 
 % bad: different font due to image generating program (or image screenshot, etc.)
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Fig.~6b]{Wetzlinger2021HSCC}}]{
+    \begin{center}
+        \includegraphics[scale=0.6]{data/figure_same_font_bad.pdf}    
+    \end{center}
+
+    Each of the truncation orders $\eta_{\text{lin}}$ and $\eta_{\text{abs}}$ (Fig. 6b) reaches their maximum at the sharp turn as the dynamics there require more terms within the Taylor series of the exponential matrix to provide satisfactory accuracy.
 }{
-    ...
+    \begin{center}
+        \input{data/figure_same_font_good.tikz}
+    \end{center}
+
+    Each of the truncation orders $\eta_{\text{lin}}$ and $\eta_{\text{abs}}$ (Fig. 6b) reaches their maximum at the sharp turn as the dynamics there require more terms within the Taylor series of the exponential matrix to provide satisfactory accuracy.
 }
 
 \noindent Using the same font and font sizes in figures as in the running text allows the figure to blend seamlessly with the rest of the document, contributing to a cohesive overall appearance.

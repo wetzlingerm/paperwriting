@@ -2,13 +2,20 @@
 \guideline[g:nontext:figure_caption]
     {Figures: Captions should provide a brief, independent summary.}
 
-% bad: caption that does not fully explain what is going on
-% note: some parts may be explained by the legend, too
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Fig.~2]{Wetzlinger2024ARCH1}}]{
+    \input{data/figure_caption.tikz}
+
+    \begin{small}
+    Figure 2: Verifiable verification benchmark. \highlightempty{}
+    \end{small}
 }{
-    ...
+    \input{data/figure_caption.tikz}
+
+    \begin{small}
+    Figure 2: Verifiable verification benchmark. \highlightpart{Initial output set $\mathcal{Y}(t_0) = C \mathcal{X}_0$, unsafe sets $\mathcal{L}_1,\mathcal{L}_2,\mathcal{L}_3$, and outer approximation of the output set $\widehat{\mathcal{Y}}([0,t_{\text{end}}])$.}
+    \end{small}
 }
 
 \noindent A good caption provides a concise description of the figure's content, enabling it to be understood without reference to the running text.
 To achieve this, all objects, lines, and shading should be clearly explained.
+Note that some explanations may already be provided via a legend.
