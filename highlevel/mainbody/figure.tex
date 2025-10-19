@@ -5,7 +5,11 @@
 \goodexample[{\cite[Adapted from Sec. 3.3 \& Fig.~1]{Wetzlinger2024ARCH1}}]{
     Our \highlightpart{main idea consists in generating sets}, e.g., using (9)-(10) and re-positioning the center afterward. The \highlightpart{procedure is illustrated in Figure 1}: (...)
     
-    \input{data/figure_mainbody.tex}
+    \IfFileExists{build/figure_mainbody.pdf}{
+        \includegraphics{build/figure_mainbody.pdf}
+    }{
+        \input{data/figure_mainbody.tex}
+    }
 
     \begin{small}
     Figure 1: The support vectors of the zero-centered unsafe set $\mathcal{L}_0$ and the output set $\widehat{\mathcal{Y}}([0,t_{\text{end}}])$ are used for placing unsafe sets.

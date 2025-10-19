@@ -8,7 +8,13 @@
         \includegraphics[scale=0.7]{data/figure_vectorgraphics_bad.png}
     \end{center}
 }{
-    \input{data/figure_vectorgraphics_good.tikz}
+    \IfFileExists{build/figure_vectorgraphics_good.pdf}{
+        \begin{center}
+            \includegraphics{build/figure_vectorgraphics_good.pdf}
+        \end{center}
+    }{
+        \input{data/figure_vectorgraphics_good.tikz}
+    }
 }
 
 \noindent No exceptions.

@@ -33,8 +33,12 @@
 \tcbuselibrary{raster}  % for good/bad examples
 
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepgfplotslibrary{groupplots}
 \usetikzlibrary{arrows,patterns}
+\usetikzlibrary{external}  % to allow for reading \tikzsetnextfilename, even if \tikzexternalize is not set
+% \tikzexternalize[prefix=build/]
+% externalization does not work with tcolorbox[enhanced] -> compile in separate file
 
 \usepackage{enumitem}  % lists (currently, modifying items)
 \setlist[itemize]{itemsep=0pt, left=8pt}

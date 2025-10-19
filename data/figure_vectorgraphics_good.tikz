@@ -3,6 +3,7 @@
 \definecolor{good_gray}{RGB}{230, 241, 238}
 \definecolor{good_yellow}{RGB}{255, 195, 37}
 %
+\tikzsetnextfilename{figure_vectorgraphics_good}
 \begin{center}
 \begin{tikzpicture}
 \pgfplotsset{
