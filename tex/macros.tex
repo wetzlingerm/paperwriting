@@ -21,6 +21,7 @@
     left=2mm,right=2mm]
     #2
 \end{tcolorbox}%
+
 \addcontentsline{toc}{section}{Guideline \theguidelinecounter. #2}
 }
 
@@ -54,6 +55,7 @@
 \end{tcolorbox}%
 \end{tcbraster}%
 \fi%
+
 }
 
 % text example (single column)
@@ -73,7 +75,9 @@
     #2
 \end{tcolorbox}%
 \fi%
+
 }
+
 \newcommand{\goodexample}[2][]{%
 \ifx\relax#1\relax
 \begin{tcolorbox}[enhanced,breakable,frame hidden,interior hidden,colback=white,
@@ -90,6 +94,7 @@
     #2
 \end{tcolorbox}%
 \fi%
+
 }
 
 % highlight background of crucial parts

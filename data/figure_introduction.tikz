@@ -1,3 +1,6 @@
+\tikzsetnextfilename{figure_introduction}
+
+\begin{center}
 \begin{tikzpicture}[
 	every node/.style={font=\small, align=left},
 	myarrow/.style={<-, shorten <=0.05cm, >=stealth', semithick}
@@ -36,3 +39,4 @@
 		{Inner approximation of the \\ reachable set $\widecheck{\mathcal{R}} = \mathcal{R}_{\text{aff}} \oplus \mathcal{R}_{\text{err}}$};
 	
 \end{tikzpicture}
+\end{center}

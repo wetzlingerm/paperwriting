@@ -7,6 +7,7 @@
 \definecolor{mycolor1}{rgb}{0.00000,0.36078,0.67059}%
 \definecolor{mycolor2}{rgb}{0.89020,0.10588,0.13725}%
 %
+\tikzsetnextfilename{figure_same_font_good}
 \begin{tikzpicture}
 
 \begin{axis}[%
