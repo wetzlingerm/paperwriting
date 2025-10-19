@@ -1,0 +1,65 @@
+\definecolor{good_blue}{RGB}{0, 92, 171}
+\definecolor{good_red}{RGB}{227, 27, 35}
+\definecolor{good_gray}{RGB}{230, 241, 238}
+\definecolor{good_yellow}{RGB}{255, 195, 37}
+%
+\begin{center}
+\begin{tikzpicture}
+\pgfplotsset{
+plotstyle1/.style={area legend, draw=black, fill=good_gray, thin, forget plot},
+plotstyle2/.style={area legend, draw=black, forget plot},
+plotstyle3/.style={area legend, draw=good_blue, pattern = north east lines, pattern color=good_blue, forget plot},
+plotstyle4/.style={area legend, draw=good_yellow, fill=good_yellow, fill opacity=0.35, forget plot},
+plotstyle5/.style={area legend, draw=good_red, fill=good_red, forget plot}
+}
+% to put axis lines on top!
+\pgfplotsset{
+	layers/axis lines on top/.define layer set={
+		axis background,
+		axis grid,
+		axis ticks,
+		axis tick labels,
+		pre main,
+		main,
+		axis lines,
+		axis descriptions,
+		axis foreground,
+	}{/pgfplots/layers/standard},
+}
+\def\rows{2}
+\def\cols{2}
+\def\horzsep{0.15cm}
+
+\begin{groupplot}[%
+group style={rows = \rows, columns = \cols, horizontal sep = \horzsep, vertical sep=\horzsep},
+scale only axis,
+set layers=axis lines on top,
+width=4cm,height=2.75cm,
+legend style={legend columns=2,legend to name=legendname, legend cell align=left,/tikz/every even column/.append style={column sep=0.75cm}},
+xmin=-730,xmax=-670,ymin=-805,ymax=-770,ticks=none
+]
+\nextgroupplot[]
+\input{./data/figure_vectorgraphics_good_11.tikz}
+\coordinate (top) at (rel axis cs:0,1);
+\coordinate (t0) at (rel axis cs:0.85,0.85);
+\node at (t0) {$t=0$};
+\nextgroupplot[]
+\input{./data/figure_vectorgraphics_good_21.tikz}
+\coordinate (t1) at (rel axis cs:0.85,0.85);
+\node at (t1) {$t=1$};
+\nextgroupplot[]
+\input{./data/figure_vectorgraphics_good_12.tikz}
+\coordinate (t2) at (rel axis cs:0.85,0.85);
+\node at (t2) {$t=2$};
+\nextgroupplot[]
+\input{./data/figure_vectorgraphics_legend.tikz}
+\input{./data/figure_vectorgraphics_good_22.tikz}
+\coordinate (t3) at (rel axis cs:0.85,0.85);
+\node at (t3) {$t=3$};
+\coordinate (bot) at (rel axis cs:1,0);
+\end{groupplot}
+\path (top|-current bounding box.south)--coordinate(legendpos)(bot|-current bounding box.south);
+\node at([yshift=-5ex]legendpos) {\pgfplotslegendfromname{legendname}};
+
+\end{tikzpicture}
+\end{center}

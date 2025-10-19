@@ -1,0 +1,10 @@
+\addlegendimage{plotstyle5}
+\addlegendentry{\small Reachable set $\widehat{\mathcal{R}}(t)$}
+\addlegendimage{plotstyle4}
+\addlegendentry{\small Reachable set $\widehat{\mathcal{R}}([0,t_{\text{end}}])$}
+\addlegendimage{plotstyle1}
+\addlegendentry{\small Road network}
+\addlegendimage{plotstyle3}
+\addlegendentry{\small Other traffic participants}
+
+
