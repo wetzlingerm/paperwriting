@@ -2,14 +2,15 @@
 \guideline[g:results:explain_results]
     {Explain and interpret the results.}
 
-% good: metrics + explanation + interpretation
-% bad: only metrics, interpretation without good justification
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~V.]{Wetzlinger2024CSL}}]{
+    Algorithm 1 is faster than the scaling approach [10] by orders of magnitude and even faster than the C++ implementation of the projection approach [5].
+    \highlightempty{}
 }{
-    ...
+    Algorithm 1 is faster than the scaling approach [10] by orders of magnitude and even faster than the C++ implementation of the projection approach [5]. (...)
+    \highlightpart{Most computation time is spent on the range bounding in (9) using interval arithmetic, which explains the fast evaluation of the Lotka-Volterra and Biological Model benchmarks whose Hessian tensor is constant.}
 }
 
-\noindent ...
-% discuss results immediately after presenting the numbers
-% interpret results for the reader, don't make them fill in the gaps
+\noindent
+While the raw data of the numerical evaluation is best presented in a table, it is still good practice to briefly summarize the results in the running text.
+Furthermore, provide an explanation for general trends by linking to the properties of all approaches that were run.
+Also, explain surprising findings---often, these cases have a particular exploitable structure.

@@ -2,12 +2,18 @@
 \guideline[g:conclusion:repeat_abstract]
     {Avoid repeating the abstract.}
 
-% good: provide additional information from the main body
-% bad: exactly repeat what has been said (redundant)
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Abstract \& Sec.~VI.]{Wetzlinger2024CSL}}]{
+    \location{Abstract} \\
+    (...) we directly obtain sound inner approximations by using the Minkowski difference in a reachability algorithm for nonlinear systems. \\
+    \location{Conclusion} \\
+    We compute a sound inner approximation of the reachable set for autonomous nonlinear systems using the Minkowski difference \highlightempty{}.
 }{
-    ...
+    \location{Abstract} \\
+    (...) we directly obtain sound inner approximations by using the Minkowski difference in a reachability algorithm for nonlinear systems. \\
+    \location{Conclusion} \\
+    We compute a sound inner approximation of the reachable set for autonomous nonlinear systems using the Minkowski difference \highlightpart{between the reachable set due to the affine dynamics and the abstraction error due to the Lagrange remainder}.
 }
 
-\noindent ...
+\noindent
+The abstract serves as an outlook on the paper, offering only a preliminary overview before the reader has full context.
+In contrast, the conclusion should build upon the complete content, providing a deeper synthesis rather than merely repeating the abstract.
