@@ -1,12 +1,49 @@
 
-\guideline[g:mainbody:running_example]
-    {Consider a running example.}
+\guideline[g:mainbody:example]
+    {Consider a short example to clarify hard-to-follow notation.}
 
-% I never did that...
-\goodexample{
-    ...
+\goodexample[{Adapted from \cite[Definition~4]{Wetzlinger2023TAC}}]{
+    Given a zonotope $\mathcal{Z} = \langle c, G \rangle_Z \subset \mathbb{R}^n$ and a desired zonotope order $\rho^* \geq 1$, the operation $\textsc{reduce}(\mathcal{Z},\rho^*) \supseteq \mathcal{Z}$ returns an enclosing zonotope with order smaller or equal to $\rho^*$
+    \begin{equation*}
+        \textsc{reduce}(\mathcal{Z},\rho^*) = \langle c, [G_{\text{keep}} ~ G_{\text{red}}] \rangle_Z
+    \end{equation*}
+    with
+    \begin{equation*}
+        G_{\text{keep}} = [G_{(\cdot,\pi_{\chi+1})} \dots G_{(\cdot,\pi_{\gamma})}], \quad
+        G_{\text{red}} = \textsc{diag} \bigg( \sum_{i=1}^\chi |G_{(\cdot,\pi_i)}| \bigg)
+    \end{equation*}
+    where $\pi_1, \dots, \pi_\gamma$ are the indices of the sorted generators
+    \begin{equation*}
+        \lVert G_{(\cdot,\pi_1)} \rVert_1 - \lVert G_{(\cdot,\pi_1)} \rVert_\infty
+        \leq \dots \leq 
+        \lVert G_{(\cdot,\pi_\gamma)} \rVert_1 - \lVert G_{(\cdot,\pi_\gamma)} \rVert_\infty
+    \end{equation*}
+    and $\chi = \gamma - \lfloor (\rho^*-1)n \rfloor$ is the number of reduced generators. \\
+    \highlightpart{\textit{Example}:}
+    Consider the zonotope $\mathcal{Z} = \langle c, G \rangle \subset \mathbb{R}^2$ with
+    \begin{equation*}
+        c = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \quad
+        G = \begin{pmatrix}
+                1  & 2 & 5  & 3 & -3 \\
+                -6 & 3 & -4 & 0 &  5
+            \end{pmatrix}
+    \end{equation*}
+    and the desired zonotope order $\rho^* = 2$.
+    Hence, we have the ordering $\pi = [4, 1, 2, 5, 3]$ and $\chi = 3$, which yields
+    $G_{\text{keep}} = \left(\begin{smallmatrix} 1 & 3 \\ -6 & 0 \end{smallmatrix}\right),
+    G_{\text{red}} = \left(\begin{smallmatrix} 10 & 0 \\ 0 & 12 \end{smallmatrix}\right)$
+    and thus
+    \begin{equation*}
+        \textsc{reduce}(\mathcal{Z},\rho^*) = \bigg\langle
+            \begin{pmatrix} 0 \\ 0 \end{pmatrix},
+            \begin{pmatrix}
+                1  & 3 & 10 & 0 \\
+                -6 & 0 & 0 & 12
+            \end{pmatrix} \bigg\rangle_Z
+        \supseteq \mathcal{Z} .
+    \end{equation*}
 }
 
-\noindent ...
-% of course, there must be a necessity to have examples in the first place
-% consider a running example if the contributions allow for that and the notation is difficult to understand, but fairly easy once you do understand it
+\noindent
+Include a short example when the notation is hard to follow but becomes clear once understood.
+Keep examples concise and only add them if they substantially aid comprehension, as they are optional and may be omitted due to space constraints.

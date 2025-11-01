@@ -2,12 +2,32 @@
 \guideline[g:mainbody:environments]
     {Use mathematical results and non-text elements to break the rigid structure of the running text.}
 
-% good: use remark/assumption
-% bad: just another paragraph...
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~III.]{Wetzlinger2025TAC}}]{
+    \tcolorboxindent{} An important consequence of the two-player game notion in backward reachability analysis is that the union of time-point solutions is a subset of the corresponding time-interval solution [1, Prop. 2], i.e.,
+    \begin{equation*}
+        \bigcup_{t\in\tau} \mathcal{R}_{\forall\exists} (-t) \subseteq \mathcal{R}_{\forall\exists} (-\tau),
+        \quad
+        \bigcup_{t\in\tau} \mathcal{R}_{\exists\forall} (-t) \subseteq \mathcal{R}_{\exists\forall} (-\tau) .
+    \end{equation*}
+    For the runtime complexity analysis of our proposed algorithms in Sections V and VI, we assume that the number of steps $\sigma$ and the truncation order $\eta$ in (25) are fixed, while the number of halfspaces of the target set $\mathcal{X}_{\text{end}}$ and the number of generators of the input set $\mathcal{U}$ and disturbance set $\mathcal{W}$ are linear in the state dimension $n$.
+    In the next section, we review the state of the art in backward reachability analysis.
 }{
-    ...
+    \tcolorboxindent{} Let us briefly highlight an important consequence of the two-player game notion in backward reachability analysis. \\
+    \highlightpart{\textit{Proposition 2 (Union [1, Prop. 2])}:}
+    The union of time-point solutions is a subset of the corresponding time-interval solution, i.e.,
+    \begin{equation*}
+        \bigcup_{t\in\tau} \mathcal{R}_{\forall\exists} (-t) \subseteq \mathcal{R}_{\forall\exists} (-\tau),
+        \quad
+        \bigcup_{t\in\tau} \mathcal{R}_{\exists\forall} (-t) \subseteq \mathcal{R}_{\exists\forall} (-\tau) .
+    \end{equation*}
+    \textit{Proof}: This follows from the order of quantifiers [1, Prop. 2]. \hfill $\square$ \\
+    \tcolorboxindent{} For the runtime complexity analysis of our proposed algorithms in Sections V and VI, we assume the following. \\
+    \highlightpart{\textit{Assumption 1 (Parameters)}:}
+    The number of steps $\sigma$ and the truncation order $\eta$ in (25) are fixed, while the number of halfspaces of the target set $\mathcal{X}_{\text{end}}$ and the number of generators of the input set $\mathcal{U}$ and disturbance set $\mathcal{W}$ are linear in the state dimension $n$. \hfill $\square$ \\
+    \tcolorboxindent{} In the next section, we review the state of the art in backward reachability analysis.
 }
 
-\noindent ...
+\noindent
+Avoid presenting all information in continuous prose, as this makes it harder for readers to form a clear mental structure.
+Instead, use mathematical environments such as definitions or remarks, as well as tables and figures, to organize content into well-defined blocks that support higher-level understanding.
+A structured presentation also facilitates referring back to specific pieces of content later on.
