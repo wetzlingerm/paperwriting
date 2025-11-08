@@ -1,15 +1,17 @@
 
 \guideline[g:introduction:relatedwork_structure]
-    {Organize the related work into paragraphs, each focused on a specific topic.}
+    {Organize the related work into paragraphs to separate subtopics.}
 
-% requires a longer related work section (at least two, better three topics)
-% bad: reader does not understand the organization, unusual proportions
-% TODO: unclear how to make bad version
-\goodbadexample{
-    ...
-}{
-    ...
+\goodexample[{\cite[Sec.~1.1]{Wetzlinger2023HSCC}}]{
+    \tcolorboxindent{} Since the reachable set is \highlightpart{a zero sublevel set solution of a Hamilton-Jacobi-Isaacs partial differential equation} [41], (...) \\
+    \tcolorboxindent{} \highlightpart{Simulations} from a sample of initial states within the initial set can be used to construct reachable sets [19]; (...) \\
+    \tcolorboxindent{} Another group of methods is \highlightpart{based on set propagation} [5].
+    These methods either (...) \\
+    \tcolorboxindent{} In contrast to the above algorithms for outer-approximations, \highlightpart{approaches for inner-approximations} (...) \\
+    \tcolorboxindent{} For successful \highlightpart{verification}, the computed outer-approximation of the reachable set (...)
 }
 
-\noindent ...
-% potentially also subsections
+\noindent
+Related work often divides naturally into subtopics that offer distinct perspectives on the research question.
+Help readers clearly distinguish these perspectives by dedicating one paragraph to each subtopic, and let the opening phrase of the first sentence act as an implicit header---as highlighted in the above example.
+If the discussion of individual subtopics becomes extensive, use subsections instead of paragraphs to maintain clarity and structure.

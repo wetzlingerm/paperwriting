@@ -2,13 +2,15 @@
 \guideline[g:introduction:transition_relatedwork_contributions]
     {Relate the limitations from the related work to the contributions.}
 
-% bad: no explicit relation, only mention side by side and reader must infer which contributions are important w.r.t limitations
-% either direct correspondence using same wording, or explicit relation like "to address the ..."
-\goodbadexample{
-    ...
-}{
-    ...
+\goodexample[{\cite[Sec.~I.A.-B.]{Wetzlinger2023TAC}}]{
+    \location{Related work} \\
+    These tools \highlightpart{still require manual tuning} of the algorithm parameters to obtain tight approximations. (...) \\
+    In conclusion, there \highlightpart{does not yet exist a fully automated parameter tuning algorithm} for linear systems that \highlightpart{satisfies an error bound} in terms of the Hausdorff distance to the exact reachable set. \\
+    \location{Contributions} \\
+    (...) we provide an \highlightpart{automated reachability algorithm} (Algorithm 2) that adaptively \highlightpart{tunes all the algorithm parameters} so that \highlightpart{any desired error bound} in terms of the Hausdorff distance between the exact reachable set and the computed outer approximation is respected at all times (see Section IV).
 }
 
-\noindent ...
-% similar to abstract
+\noindent
+Readers must clearly understand what problem the paper addresses, so the contributions should be explicitly tied to the limitations of prior work.
+Each contribution should respond directly to a specific shortcoming in the state of the art, using consistent wording or even restating the limitation when appropriate.
+Avoid leaving these connections implicit.

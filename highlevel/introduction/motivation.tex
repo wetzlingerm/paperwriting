@@ -1,15 +1,19 @@
 
 \guideline[g:introduction:motivation]
-    {Explain the purpose of the research field, then narrow the focus to your specific topic.}
+    {Move from the broad research field to the precise topic.}
 
-% EASY
-% use first paragraph of one of the papers (inner approx)
-% bad: no explain at all? or jump directly to specific topic without providing any context
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~I.]{Wetzlinger2024CSL}}]{
+    \location{Beginning of introduction} \\
+    Inner approximations of reachable sets for uncertain dynamical systems are used as a formal method to falsify safety specifications.
 }{
-    ...
+    \location{Beginning of introduction} \\
+    Formal methods can determine whether an uncertain dynamical system meets a given specification.
+    Reachability analysis computes all states that are reachable under the given uncertainties, and, thus, can be used for formal verification [1].
+    However, the exact reachable set cannot be computed except for special system classes [2];
+    if a computed outer approximation cannot verify safety, an inner approximation may falsify safety, instead.
 }
 
-\noindent ...
-% - the first paragraph must explain the purpose of the research field, and go from broad to specific until the topic of this paper is reached
+\noindent
+Commonly, the first sentence introduces the purpose and relevance of the research field.
+After that, guide the reader from that broad context to the specific topic of the paper in a strictly sequential manner, with each key term in the opening sentences marking a clear step from coarse to fine.
+Avoid circling back or shifting focus---move linearly toward the precise research topic.
