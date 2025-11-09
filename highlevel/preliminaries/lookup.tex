@@ -9,14 +9,16 @@
         \widehat{y}(\ell) = \rho \big( \widehat{\mathcal{Y}}([0,t_{\text{end}}]), \ell \big) = \max_{k \in \{0,\dots,\omega - 1\}} \rho \big( \widehat{\mathcal{Y}}(\tau_k) , \ell \big) ,
     \end{equation*}
     \highlightpart{where the support function in a direction $\ell \in \mathbb{R}^n$ is defined by $\rho(\mathcal{S},\ell) \coloneqq \max_{x \in \mathcal{S}} \ell^\top x$}.
+    \badexpl{The main body here also ``introduces'' known concepts, which blurs the lines between preexisting knowledge and novel contributions.}
 }{
     \location{Preliminaries} \\
-    \highlightpart{The support function in a direction $\ell \in \mathbb{R}^n$ is defined by $\rho(\mathcal{S},\ell) \coloneqq \max_{x \in \mathcal{S}} \ell^\top x$} (...). \\
+    \highlightpart{The support function in a direction $\ell \in \mathbb{R}^n$ is defined by $\rho(\mathcal{S},\ell) \coloneqq \max_{x \in \mathcal{S}} \ell^\top x$} (...).
     \location{Main Body} \\
     Given a random direction $\ell \in \mathbb{R}^r, \left\| \ell \right\|_2 = 1$, we compute the support vector $\widehat{y}(\ell)$ associated to the support function of the computed outer approximation $\widehat{\mathcal{Y}}([0,t_{\text{end}}])$, i.e.,
     \begin{equation*}
         \widehat{y}(\ell) = \rho \big( \widehat{\mathcal{Y}}([0,t_{\text{end}}]), \ell \big) = \max_{k \in \{0,\dots,\omega - 1\}} \rho \big( \widehat{\mathcal{Y}}(\tau_k) , \ell \big) .
     \end{equation*}
+    \goodexpl{The use of support functions is now decoupled from their definition, which allows for a better focus on the actual contributions.}
 }
 
 \noindent
