@@ -4,28 +4,29 @@
 
 \goodbadexample[{\cite[Adapted from Sec.~I.]{Wetzlinger2024CSL}}]{
     \location{Paragraph: Motivation} \\
-    \tcolorboxindent{} (...)
-    If a computed outer approximation cannot verify safety, an inner approximation, \highlightpart{which is often computed based on outer approximations}, may falsify safety, instead. (...) \\
-    \location{Paragraph: Related work} \\
-    \tcolorboxindent{} \highlightpart{In contrast to our approach, which directly computes an inner approximation}, most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
-    Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]:
-    This has been shown for outer approximations computed via an \highlightpart{on-the-fly linearization of the nonlinear dynamics, yielding an affine dynamics and a higher-order dynamics, which also forms the basis of our approach}. \\
-    \location{Paragraph: Contributions} \\
-    \tcolorboxindent{} Figure 1 summarizes our main contribution: \highlightempty{}
-    While the Minkowski sum of the reachable sets for the affine and higher-order dynamics is a common method to compute outer approximations, we obtain inner approximations via the Minkowski difference of the aforementioned sets.
     (...)
+    If a computed outer approximation cannot verify safety, an inner approximation, \highlightpart{which is often computed based on outer approximations}, may falsify safety, instead. (...) \\
+    \badexpl{Particular approaches generally belong in related work.}
+    \location{Paragraph: Related work} \\
+    \highlightpart{In contrast to our approach, which directly computes an inner approximation}, most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
+    Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]:
+    This has been shown for outer approximations computed via an \highlightpart{on-the-fly linearization of the nonlinear dynamics, yielding an affine dynamics and a higher-order dynamics, which also forms the basis of our approach}.
+    \badexpl{Both highlighted parts represent the bad practice of mixing contributions into the related work.}
+    \location{Paragraph: Contributions} \\
+    Figure 1 summarizes our main contribution: \highlightempty{}
+    While the Minkowski sum of the reachable sets for the affine and higher-order dynamics is a common method to compute outer approximations, we obtain inner approximations via the Minkowski difference (...)
+    \badexpl{The contributions are now no longer self-contained because some parts have leaked into the related work.}
 }{
     \location{Paragraph: Motivation} \\
-    \tcolorboxindent{} (...)
-    If a computed outer approximation cannot verify safety, an inner approximation \highlightempty{} may falsify safety, instead. (...) \\
-    \location{Paragraph: Related work} \\
-    \tcolorboxindent{} Most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
-    Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]. \highlightempty{} \\
-    \location{Paragraph: Contributions} \\
-    \tcolorboxindent{} Figure 1 summarizes our main contribution:
-    \highlightpart{Using an on-the-fly linearization of the nonlinear autonomous dynamics, we obtain an affine dynamics and a higher-order dynamics.}
-    While the Minkowski sum of the corresponding reachable sets is a common method to compute outer approximations, we obtain inner approximations via the Minkowski difference of the aforementioned sets.
     (...)
+    If a computed outer approximation cannot verify safety, an inner approximation \highlightempty{} may falsify safety, instead. (...) \par
+    \location{Paragraph: Related work} \\
+    Most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
+    Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]. \highlightempty{} \par
+    \location{Paragraph: Contributions} \\
+    Figure 1 summarizes our main contribution:
+    \highlightpart{Using an on-the-fly linearization of the nonlinear autonomous dynamics, we obtain an affine dynamics and a higher-order dynamics.}
+    While the Minkowski sum of the corresponding reachable sets is a common method to compute outer approximations, we obtain inner approximations via the Minkowski difference (...)
 }
 
 \noindent

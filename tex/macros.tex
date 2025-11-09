@@ -124,8 +124,10 @@
 \makeatother
 \newcommand{\widecheck}[1]{\,\widecheckinternal{\kern -2pt #1}}
 
-% indication of sections
-\newcommand{\location}[1]{\begin{footnotesize} (\textsc{#1}) \end{footnotesize}}
+% comments in examples
+\newcommand{\location}[1]{\begin{footnotesize} [\textsc{#1}] \end{footnotesize}}
+\newcommand{\badexpl}[1]{\par \begin{small} \textcolor{color_example_bad}{[$\rightarrow$ #1]} \end{small} \par}
+\newcommand{\goodexpl}[1]{\par \begin{small} \textcolor{color_guideline}{[$\rightarrow$ #1]} \end{small} \par}
 
 % rule for fake algorithm environments
 \newcommand{\algruletop}{\noindent\rule{\textwidth}{0.2pt}}

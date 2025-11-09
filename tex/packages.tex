@@ -42,6 +42,8 @@
 
 \usepackage{enumitem}  % lists (currently, modifying items)
 \setlist[itemize]{itemsep=0pt, left=8pt}
+\newlist{compactitemize}{itemize}{1}
+\setlist[compactitemize,1]{nosep, left=8pt, label={\textbullet}}
 
 \usepackage{algpseudocode}  % algorithmic environment
 
