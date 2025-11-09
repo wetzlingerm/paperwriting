@@ -1,13 +1,37 @@
 
 \guideline[g:preliminaries:problemstatement]
-    {Provide all information required to formulate the problem statement.}
+    {Introduce all necessary information before stating the problem.}
 
-% example: extract necessary parts for the problem statement from preliminaries + problem statement
-% bad: move some necessary parts for the problem statement in the problem statement
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Adapted from Sec.~2~\&~3]{Wetzlinger2023HSCC}}]{
+    \textit{Problem 1. (Verification)}
+    ~ Given an LTI system $\dot{x} = Ax(t) + Bu(t)$ where the initial state $x(0)$ and the input $u(t)$ are uncertain within the initial set $\mathcal{X}^0 \subset \mathbb{R}^n$ and the input set $\mathcal{U} \subset \mathbb{R}^m$, respectively, as well as a polytope $\mathcal{K} = \{ z \in \mathbb{R}^r \, | Hz \leq f \}$, decide whether the output set $\mathcal{Y}(t)$ obtained from the output equation $y(t) = Cx(t) + Wv(t)$ where $v(t) \in \mathcal{V} \subset \mathbb{R}^o$ stays within the safe set $\mathcal{K}$ at all times $t \in [0,t_\text{end}]$:
+    \begin{equation*}
+        \forall t \in [0, t_\text{end}]\colon \mathcal{Y}(t) \subseteq \mathcal{K} .
+    \end{equation*}
 }{
-    ...
+    \location{Preliminaries} \\
+    \textit{Definition 3. (Polytopes)} The halfspace representation of a polytope $\mathcal{P} \subset \mathbb{R}^n$ is (...):
+    \begin{equation*}
+        \mathcal{P} \coloneqq \{ x \in \mathbb{R}^n \, | \, Hx \leq f \}
+    \end{equation*}
+    (...) We use the shorthand notation $\mathcal{P} = \highlightpartmath{\langle H, f \rangle_H}$. \\
+    \location{Problem Statement} \\
+    We consider \highlightpart{LTI systems of the form}
+    \begin{align*}
+        \dot{x}(t) &= Ax(t) + Bu(t) , \tag{5a} \\
+        y(t) &= Cx(t) + Wv(t) . \tag{5b}
+    \end{align*}
+    (...) The initial state $x(0)$, the input $u(t)$, and $v(t)$ are uncertain within the \highlightpart{initial set $\mathcal{X}^0 \subset \mathbb{R}^n$, the input set $\mathcal{U} \subset \mathbb{R}^m$, and the output uncertainty set $\mathcal{V} \subset \mathbb{R}^o$}, respectively. (...) \\
+    (...) which extends to the \highlightpart{output set $\mathcal{Y}(t)$ obtained from a set-based evaluation of (5b)}. (...) \\
+    \textit{Problem 1. (Verification)}
+    ~ Given an \highlightpart{LTI system (5)} with \highlightpart{initial set $\mathcal{X}^0 \subset \mathbb{R}^n$, input set $\mathcal{U} \subset \mathbb{R}^m$, and output uncertainty set $\mathcal{V} \subset \mathbb{R}^o$}, as well as a safe set $\mathcal{K} = \highlightpartmath{\langle H, f \rangle_H}$, decide whether
+    \begin{equation*}
+        \forall t \in [0, t_\text{end}]\colon \mathcal{Y}(t) \subseteq \mathcal{K} ,
+    \end{equation*}
+    that is, whether the \highlightpart{output set $\mathcal{Y}(t)$} stays within the safe set $\mathcal{K}$ at all times $t \in [0,t_\text{end}]$.
 }
 
-\noindent ...
+\noindent
+The problem statement should be concise and focused on the main question.
+Present all necessary background, notation, and prerequisites beforehand—either in the preliminaries or immediately above the statement.
+Avoid overloading the problem statement with contextual details; lay the groundwork first so the problem can be stated cleanly.

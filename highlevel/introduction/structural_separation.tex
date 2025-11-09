@@ -1,15 +1,35 @@
 
 \guideline[g:introduction:structural_separation]
-    {Structurally separate the motivation, related work, and contributions.}
+    {Separate the motivation, related work, and contributions.}
 
-% Will be a fairly long example -> use shortest introduction section
-% Rewrite in a way that mixes the three parts
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Adapted from Sec.~I.]{Wetzlinger2024CSL}}]{
+    \location{Paragraph: Motivation} \\
+    \tcolorboxindent{} (...)
+    If a computed outer approximation cannot verify safety, an inner approximation, \highlightpart{which is often computed based on outer approximations}, may falsify safety, instead. (...) \\
+    \location{Paragraph: Related work} \\
+    \tcolorboxindent{} \highlightpart{In contrast to our approach, which directly computes an inner approximation}, most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
+    Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]:
+    This has been shown for outer approximations computed via an \highlightpart{on-the-fly linearization of the nonlinear dynamics, yielding an affine dynamics and a higher-order dynamics, which also forms the basis of our approach}. \\
+    \location{Paragraph: Contributions} \\
+    \tcolorboxindent{} Figure 1 summarizes our main contribution: \highlightempty{}
+    While the Minkowski sum of the reachable sets for the affine and higher-order dynamics is a common method to compute outer approximations, we obtain inner approximations via the Minkowski difference of the aforementioned sets.
+    (...)
 }{
-    ...
+    \location{Paragraph: Motivation} \\
+    \tcolorboxindent{} (...)
+    If a computed outer approximation cannot verify safety, an inner approximation \highlightempty{} may falsify safety, instead. (...) \\
+    \location{Paragraph: Related work} \\
+    \tcolorboxindent{} Most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
+    Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]. \highlightempty{} \\
+    \location{Paragraph: Contributions} \\
+    \tcolorboxindent{} Figure 1 summarizes our main contribution:
+    \highlightpart{Using an on-the-fly linearization of the nonlinear autonomous dynamics, we obtain an affine dynamics and a higher-order dynamics.}
+    While the Minkowski sum of the corresponding reachable sets is a common method to compute outer approximations, we obtain inner approximations via the Minkowski difference of the aforementioned sets.
+    (...)
 }
 
-\noindent ...
-% type of separation depends on length of paper: only paragraphs or subsections
-% very important: don't mix in your contributions into the related work
+\noindent
+The motivation sets the frame for the paper by introducing the broad research field and narrowing down to the specific research question.
+Particular approaches addressing that research question are then surveyed in the related work.
+Crucially, present your contributions separately from related work to avoid blurring the distinction between preexisting knowledge and the novelties from your work.
+For longer introductions, consider using distinct subsections instead of paragraphs only.
