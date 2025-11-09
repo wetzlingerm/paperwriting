@@ -2,15 +2,34 @@
 \guideline[g:universals:claims]
     {Give a reason for claims.}
 
-% EASY
-% use wrapping effect?
-% bad: state some fact (behavior of a certain thing) without justifying why that would be true
-% reason can be a reference
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~IX.]{Wetzlinger2023TAC}}]{
+    \highlightempty{} Our approach is competitive regarding the computation time, even for high-dimensional systems.
 }{
-    ...
+    An \highlightpart{evaluation on benchmarks representing the current limits for the state-of-the-art reachability tools demonstrates} that our approach is competitive regarding the computation time, even for high-dimensional systems.
 }
 
-\noindent ...
-% whenever claiming something behaves in a certain way, provide a reason (or a reference)
+\goodbadexample[{\cite[Sec.~VI.B.]{Wetzlinger2025TAC}}]{
+    For three compact, convex, and nonempty sets $\mathcal{S}_1, \mathcal{S}_2, \mathcal{S}_3 \subset \mathbb{R}^n$, we have
+    \begin{equation*}
+        \textsc{conv}(\mathcal{S}_1 \ominus \mathcal{S}_3, \mathcal{S}_2 \ominus \mathcal{S}_3) \subseteq
+        \textsc{conv}(\mathcal{S}_1, \mathcal{S}_2) \ominus \mathcal{S}_3 .
+    \end{equation*}
+    \highlightempty{}
+}{
+    \textit{Lemma 1 (Distributivity of Minkowski difference over convex hull)}: For three compact, convex, and nonempty sets $\mathcal{S}_1, \mathcal{S}_2, \mathcal{S}_3 \subset \mathbb{R}^n$, we have
+    \begin{equation*}
+        \textsc{conv}(\mathcal{S}_1 \ominus \mathcal{S}_3, \mathcal{S}_2 \ominus \mathcal{S}_3) \subseteq
+        \textsc{conv}(\mathcal{S}_1, \mathcal{S}_2) \ominus \mathcal{S}_3 .
+    \end{equation*}
+    \highlightpart{\textit{Proof}}: See appendix. \hfill $\square$
+}
+
+\goodbadexample[{\cite[Sec.~1]{Wetzlinger2021HSCC}}]{
+    Since exact reachable sets can only be computed for a limited number of system classes \highlightempty{}, reachability algorithms compute over-approximations to establish soundness.
+}{
+    Since exact reachable sets can only be computed for a limited number of system classes \highlightpart{[36]}, reachability algorithms compute over-approximations to establish soundness.
+}
+
+\noindent
+In scientific writing, every claim about a behavior or result should be supported by clear reasoning and never left without a solid basis.
+Depending on the complexity of the statement, this justification may take the form of a brief explanation, a formal proof, or a reference to established work where the claim is substantiated.

@@ -2,12 +2,30 @@
 \guideline[g:universals:flow]
     {Use appropriate transitions between paragraphs.}
 
-% good: repeat words to provide a link to the previous paragraph
-% bad: unclear how next paragraph relates to previous one
-\goodbadexample{
-    ...
+\goodbadexample[{\cite[Sec.~III.B.]{Wetzlinger2024CSL}}]{
+    We now derive our novel set-based computation for inner approximations of the time-point and time-interval reachable sets. \highlightempty{} \\
+    \textit{Lemma 1}: Let (...) \\
+    \textit{Proof}: We first (...) \hfill $\square$ \\
+    \highlightempty{} \\
+    \textit{Proposition 1 (Time-point reachable set)}: For (...) \\
+    \textit{Proof}: Each successor state (...) \hfill $\square$ \\
+    \highlightempty{} \\
+    \textit{Proposition 2 (Time-interval reachable set)}: For (...) \\
+    \textit{Proof}: Using (...) \hfill $\square$
 }{
-    ...
+    We now derive our novel set-based computation for inner approximations of the time-point and time-interval reachable sets.
+    \highlightpart{Let us first show} how the Minkowski difference can be used as an inner approximation. \\
+    \textit{Lemma 1}: Let (...) \\
+    \textit{Proof}: We first (...) \hfill $\square$ \\
+    Crucially, \highlightpart{Lemma 1 enables us} to use the Minkowski difference for computing inner approximations. \\
+    \textit{Proposition 1 (Time-point reachable set)}: For (...) \\
+    \textit{Proof}: Each successor state (...) \hfill $\square$ \\
+    \highlightpart{Next, we show} how to compute an inner approximation of the time-interval reachable set $\widecheck{\mathcal{R}}(\tau_0) \subseteq \mathcal{R}(\tau_0)$. \\
+    \textit{Proposition 2 (Time-interval reachable set)}: For (...) \\
+    \textit{Proof}: Using (...) \hfill $\square$
 }
 
-\noindent ...
+\noindent
+Paragraphs form distinct units of thought but should still connect smoothly to maintain a coherent flow of presentation.
+Use clear transitions---either explicit cues (as illustrated in the above example) or implicit links that refer back to the preceding topic in the opening sentence.
+Avoid abrupt shifts where the relationship between consecutive paragraphs is unclear.
