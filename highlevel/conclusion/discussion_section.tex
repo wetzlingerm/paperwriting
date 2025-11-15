@@ -2,10 +2,13 @@
 \guideline[g:conclusion:discussion_section]
     {Discuss your work in a broader frame of reference.}
 
-% make the comparison to the literature that was not possible before the main body
-\goodexample{
-    ...
+\goodexample[{\cite[Sec.~VIII.]{Wetzlinger2023TAC}}]{
+    Moreover, for systems where some states have no initial uncertainty and are not influenced by uncertain inputs, \highlightpart{our proposed algorithm cannot falsify the system} since the computed inner approximation of the reachable set will always be empty. (...)
+    Fortunately, these \highlightpart{cases are easy to detect and one can use classical safety falsification techniques (...) instead}.
 }
 
-\noindent ...
-% only make a separate discussion section if necessary (probably not for shorter papers)
+\noindent
+A discussion helps readers understand how your approach fits into the existing body of work---not at the high-level conceptual view of the introduction, but in terms of specific properties such as assumptions, applicability, or overall quality of results.
+This section is not about judging your method as better or worse, but about clarifying how its characteristics compare with those of related approaches.
+Include a dedicated discussion section only if the material is substantial;
+in shorter papers, it can be integrated into the results or conclusion.
