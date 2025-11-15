@@ -1,45 +1,76 @@
 
 \begin{tikzpicture}[
-    every node/.style={font=\small}
+    every node/.style={font=\footnotesize},
+    stealtharrow/.style={->,>=stealth',shorten >= 1pt}
 ]
     % Do not exceed total width of 10
-    % \draw[red] (-0.5,0.75) rectangle (9.5,-3.0);
+    % \draw[red] (-0.5,0.75) rectangle (9.5,-6.0);
 
     % intersection is at (0,0)
-    \draw[black,->,>=stealth'] (-0.3,0) -- ++(9.5,0) node[pos=0.99,yshift=0.25cm,anchor=east] {Running text};
-    \draw[black,->,>=stealth'] (0,0.2) -- ++(0,-3) node[pos=0.8,anchor=south,rotate=90] {Depth};
+    \draw[stealtharrow] (-0.3,0) -- ++(9.5,0) node[pos=0.99,yshift=0.25cm,anchor=east] {Running text};
+    \draw[stealtharrow] (0,0.2) -- ++(0,-5.75) node[pos=0.85,anchor=south,rotate=90] {Depth};
 
-    \begin{scope}[xshift=0.4cm,yshift=-0.4cm]
+    \def\xoffset{0.4}
+    \def\yoffset{-1.4}
     \def\dx{0.6}
     \def\dy{0.5}
+    \foreach \y in { 0, 1, 2, 3 }{
+        \draw[] (0.15,\yoffset - \y*\dy) -- ++(-0.3,0) node[left] {\y};
+    }
 
-    % --- specific to good case
+    \begin{scope}[xshift=\xoffset cm,yshift=\yoffset cm]
 
     \filldraw[color_guideline] (0,0) circle(0.05cm);
     \draw[color_guideline,semithick]
-        (0,0)           -- ++(\dx,0)
-        -- ++(0,-1*\dy) -- ++(\dx,0)
-        -- ++(0,-2*\dy) -- ++(\dx,0)
-        -- ++(0,-1*\dy) -- ++(\dx,0)
-           ++(0,+3*\dy) -- ++(\dx,0)
-        -- ++(0,-1*\dy) -- ++(2*\dx,0)
-        -- ++(0,-1*\dy) -- ++(\dx,0)
-           ++(0,+1*\dy) -- ++(\dx,0)
-        -- ++(0,-2*\dy) -- ++(\dx,0)
-           ++(0,+3*\dy) -- ++(\dx,0)
-        -- ++(0,-1*\dy) -- ++(\dx,0);
+        (0,0)           -- ++(\dx,0)    % depth 0: title + introductory sentence
+        -- ++(0,-1*\dy) -- ++(\dx,0)    % depth 1: A. + introductory sentence
+        -- ++(0,-1*\dy) -- ++(\dx,0)    % depth 2: support function
+        -- ++(0,+0*\dy) -- ++(\dx,0)    % depth 2: polytopes
+        -- ++(0,-1*\dy) -- ++(\dx,0)    % depth 3: polytopes -- set operations
+           ++(0,+1*\dy) -- ++(\dx,0)    % depth 2: (constrained) zonotopes
+        -- ++(0,-1*\dy) -- ++(\dx,0)    % depth 3: (constrained) zonotopes -- set operations
+           ++(0,+2*\dy) -- ++(\dx,0)    % depth 1: B.
+        -- ++(0,-1*\dy) -- ++(\dx,0)    % depth 2: reachability algorithm
+        -- ++(0,-1*\dy) -- ++(\dx,0)    % depth 3: reachability algorithm -- steps
+           ++(0,+1*\dy) -- ++(\dx,0);   % depth 2: time complexity
 
     \foreach \x/\y/\L in {
-        2*\dx / -1*\dy / 2*\dx ,
-        5*\dx / -1*\dy / 5*\dx ,
-        7*\dx / -2*\dy / 1*\dx
+        2*\dx / -1*\dy / 5*\dx ,
+        4*\dx / -2*\dy / 1*\dx ,
+        9*\dx / -2*\dy / 1*\dx
     }{
         \draw[color_guideline,dashed] (\x,\y) -- ++(\L,0);
     }
 
-    \filldraw[color_guideline] (12*\dx,0) circle(0.05cm);
-    \draw[color_guideline,semithick] (12*\dx,0) -- ++(\dx,0);
-    \draw[color_guideline,semithick,dotted] (13*\dx,0) -- ++(0.5*\dx,0);
+    \draw[decorate,decoration={brace,amplitude=5pt}] (0*\dx,0.75) -- ++(11*\dx,0)
+        node[midway,yshift=10pt]{Section IV.};
+    \draw[decorate,decoration={brace,amplitude=5pt}] (1*\dx,0.15) -- ++(6*\dx,0)
+        node[midway,yshift=10pt]{Section IV.A.};
+    \draw[decorate,decoration={brace,amplitude=5pt}] (7*\dx,0.15) -- ++(4*\dx,0)
+        node[midway,yshift=10pt]{Section IV.B.};
+
+    \draw[stealtharrow] (2.5*\dx,-4*\dy) -- ++(0,2*\dy) node[pos=0,anchor=north] {Def.\ 2};
+    \draw[stealtharrow] (3.5*\dx,-5*\dy) -- ++(0,3*\dy) node[pos=0,anchor=north] {Def.\ 3};
+    \draw[stealtharrow] (4.5*\dx,-6.75*\dy) -- ++(0,3.75*\dy)
+        node[pos=0,anchor=east,yshift=0.25*\dy cm] {Def.\ 3 (set operations)};
+    \draw[stealtharrow] (5.5*\dx,-5*\dy) -- ++(0,3*\dy) node[pos=0,anchor=north] {Def.\ 4};
+    \draw[stealtharrow] (6.5*\dx,-7.75*\dy) -- ++(0,4.75*\dy)
+        node[pos=0,anchor=east,yshift=0.25*\dy cm] {Def.\ 4 (set operations)};
+
+    \draw[stealtharrow] (8.5*\dx,-7.75*\dy) -- ++(0,5.75*\dy)
+        node[pos=0,anchor=west,yshift=0.25*\dy cm,align=left] {Reachability algorithm};
+    \draw[stealtharrow] (9.5*\dx,-6.25*\dy) -- ++(0,3.25*\dy)
+        node[pos=0,anchor=west,yshift=0.25*\dy cm,align=left] {Reachability algorithm \\ (details)};
+    \draw[stealtharrow] (10.5*\dx,-4.75*\dy) -- ++(0,2.75*\dy)
+        node[pos=0,anchor=west,yshift=0.25*\dy cm,align=left] {Time complexity};
+
+    % next chapter
+    \filldraw[color_guideline] (11.5*\dx,0) circle(0.05cm);
+    \draw[color_guideline,semithick] (11.5*\dx,0) -- ++(\dx,0);
+    \draw[color_guideline,semithick,dotted] (12.5*\dx,0) -- ++(1.5*\dx,0);
+
+    \draw[decorate,decoration={brace,amplitude=5pt}] (11.5*\dx,0.75) -- ++(1.5,0)
+        node[midway,yshift=10pt]{Section V.};
 
     \end{scope}
 
