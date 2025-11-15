@@ -1,0 +1,43 @@
+
+\guideline[g:universals:layers]
+    {Support layered reading.}
+
+% Use an except of a paper, show which parts correspond to which level of depth
+\goodexample{
+    ...
+}
+
+\noindent ...
+% different types of readers: full read, read for main ideas, read for specific information
+% applies recursively: sections in the entire paper, paragraphs in a section, thoughts in a paragraph
+
+% Note: Axes must be equal in both subfigures
+\begin{figure}[t]
+    \centering
+
+    \begin{subfigure}{0.99\textwidth}
+        \captionsetup{aboveskip=2pt, belowskip=6pt}  % skip below for more separation to subfigure below
+        \centering
+        \input{data/layers_good.tex}
+        \caption{Structure supporting layered reading.}
+        % lower layers can be skipped, continue along the dashed line
+        % allows for quickly finding necessary information if required
+        % allows for reading a paper on a certain depth, e.g., skip details, focus on high-level idea
+        \label{fig:layers:layered}
+    \end{subfigure}
+
+    \begin{subfigure}{0.99\textwidth}
+        \captionsetup{aboveskip=2pt, belowskip=0pt}
+        \centering
+        \input{data/layers_bad.tex}
+        \caption{Structure not supporting layered reading.}
+        % often shorter text because of lack of structural explanation (transition sentences and the like)
+        % since the structure is unclear, one must traverse the entire path to find some specific information
+        % heavier burden on what a reader must keep in mind when reading
+        % difficult to separate high-level ideas from details, since mixed together
+        \label{fig:layers:nonlayered}
+    \end{subfigure}
+
+    \caption{Different structures for the layers of depth of the running text.}
+    \label{fig:layers}
+\end{figure}

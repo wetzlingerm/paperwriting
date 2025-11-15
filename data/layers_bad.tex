@@ -1,0 +1,37 @@
+
+\begin{tikzpicture}[
+    every node/.style={font=\small}
+]
+    % Do not exceed total width of 10
+    % \draw[red] (-0.5,0.75) rectangle (9.5,-3.0);
+
+    % intersection is at (0,0)
+    \draw[black,->,>=stealth'] (-0.3,0) -- ++(9.5,0) node[pos=0.99,yshift=0.25cm,anchor=east] {Running text};
+    \draw[black,->,>=stealth'] (0,0.2) -- ++(0,-3) node[pos=0.8,anchor=south,rotate=90] {Depth};
+
+    \begin{scope}[xshift=0.4cm,yshift=-0.4cm]
+    \def\dx{0.6}
+    \def\dy{0.5}
+
+    % --- specific to bad case
+
+    \filldraw[color_example_bad] (0,0) circle(0.05cm);
+    \draw[color_example_bad,semithick]
+        (0,0)           -- ++(\dx,0)
+        -- ++(0,-1*\dy) -- ++(\dx,0)
+        -- ++(0,-2*\dy) -- ++(\dx,0)
+        -- ++(0,-1*\dy) -- ++(\dx,0)
+        -- ++(0,+2*\dy) -- ++(2*\dx,0)
+        -- ++(0,-1*\dy) -- ++(\dx,0)
+        -- ++(0,+1*\dy) -- ++(\dx,0)
+        -- ++(0,-2*\dy) -- ++(\dx,0)
+        -- ++(0,+3*\dy) -- ++(\dx,0)
+        -- ++(0,-1*\dy) -- ++(\dx,0);
+
+    \filldraw[color_example_bad] (12*\dx,0) circle(0.05cm);
+    \draw[color_example_bad,semithick] (12*\dx,0) -- ++(\dx,0);
+    \draw[color_example_bad,semithick,dotted] (13*\dx,0) -- ++(0.5*\dx,0);
+
+    \end{scope}
+
+\end{tikzpicture}
