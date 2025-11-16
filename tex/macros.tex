@@ -135,3 +135,13 @@
 
 % indentation in tcolorbox
 \newcommand{\tcolorboxindent}{\phantom{~~~}}
+
+% further reading: paragraph + reference
+\newcommand{\parwithcite}[2]{%
+    \noindent
+    \ignorespaces
+    #2
+    \begin{itemize}
+        \forcsvlist{\item[] \fullcite}{#1}%
+    \end{itemize}
+}

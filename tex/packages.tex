@@ -72,12 +72,13 @@
 %% \setglossarystyle{list}
 %% \makeglossaries
 
-\usepackage{relsize}
+\usepackage{etoolbox}  % for for-loop in newcommand
+\usepackage{relsize}  % for resizing font sizes dependent on surrounding size
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
 
 \usepackage{csquotes}  % required by compilation?
 \usepackage[backend=biber,
-    url=false,
+    url=true,
     doi=true,
     isbn=true,
     style=ext-numeric-comp,
