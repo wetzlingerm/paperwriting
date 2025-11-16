@@ -83,9 +83,9 @@
 %%%% LIST OF TERMS %%%%
 % \printglossary[title=List of Terms]
 
-%%%% REFERENCES FOR GUIDELINES %%%%
-% \input{tex/guidelines_references.tex} % deprecated
-\printbibliography
+%%%% REFERENCES %%%%
+\newrefcontext[labelprefix=W]
+\printbibliography[keyword={W},title={References}]
 
 
 \end{document}

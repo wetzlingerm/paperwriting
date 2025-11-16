@@ -72,6 +72,8 @@
 %% \setglossarystyle{list}
 %% \makeglossaries
 
+\usepackage{relsize}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
 
 \usepackage{csquotes}  % required by compilation?
 \usepackage[backend=biber,
@@ -88,4 +90,7 @@
 \DeclareFieldFormat{titlecase:title}{\MakeSentenceCase*{#1}}
 \DeclareFieldFormat{titlecase:booktitle}{#1}
 \DeclareFieldFormat{titlecase:journaltitle}{#1}
-\DeclareFieldFormat{doi}{doi: \text{#1}}
+\DeclareFieldFormat{doi}{\mkbibacro{DOI}\addcolon\space\href{https://doi.org/#1}
+    {\textsmaller{\textcolor{color_guideline}{\nolinkurl{#1}}}}}
+\DeclareFieldFormat{url}{\mkbibacro{URL}\addcolon\space\href{#1}
+    {\textsmaller{\textcolor{color_guideline}{\nolinkurl{#1}}}}}
