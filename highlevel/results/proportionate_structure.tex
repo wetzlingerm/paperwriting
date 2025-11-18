@@ -1,16 +1,15 @@
 
 \guideline[g:results:subsections]
-    {Organize examples into separate subsections.}
+    {Organize the examples into separate subsections.}
 
-\goodexample[{\cite[Sec.~VII.A.-C.]{Wetzlinger2023TAC}}]{
-    \textit{A. Electric Circuit} \\
-    \highlightpart{To showcase the general concept of our approach, we first consider} the deliberately simple example of an electric circuit (...) \\
-    \textit{B. ARCH Benchmarks} \\
-    \highlightpart{Next, we evaluate} our verification algorithm on benchmarks from the 2021 ARCH competition [53], where state-of-the-art reachability tools compete with one another to solve challenging verification tasks.
-    We consider all linear continuous-time systems, which are (...) \\
-    \textit{C. Autonomous Car} \\
-    \highlightpart{Finally, we show} that our verification algorithm can handle complex verification tasks featuring time-varying specifications.
-    To this end, we consider the benchmark proposed in [54], where (...)
+\goodexample[{\cite[Sec.~6.1-6.3]{Wetzlinger2023HSCC}}]{
+    \textit{6.1 ARCH benchmarks} \\
+    In the annual ARCH competition, state-of-the-art reachability tools compete to efficiently verify a set of benchmarks.
+    \highlightpart{We applied our verification algorithm to all LTI systems} from the 2021 edition [3]: (...) \\
+    \textit{6.2 Frequency and voltage control} \\
+    \highlightpart{To demonstrate the benefit} of our verification algorithms for real-world applications, we consider the highly relevant use case of power system frequency and voltage control. (...) \\
+    \textit{6.3 Quadcopter example} \\
+    \highlightpart{Finally, we demonstrate} that our approach can efficiently verify linear systems even in the presence of complex time-varying obstacles. (...)
 }
 
 \noindent

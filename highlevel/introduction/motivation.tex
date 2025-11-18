@@ -2,17 +2,19 @@
 \guideline[g:introduction:motivation]
     {Start by moving from the broad research field to the precise topic.}
 
-\goodbadexample[{\cite[Sec.~I.]{Wetzlinger2024CSL}}]{
+\goodbadexample[{Adapted from \cite[Sec.~1]{Wetzlinger2021HSCC}}]{
     \location{Beginning of introduction} \\
-    Inner approximations of reachable sets for uncertain dynamical systems are used as a formal method to falsify safety specifications.
-    \badexpl{The terms ``inner approximations'', ``uncertain dynamical systems'', and ``formal method'' are not properly introduced.}
+    The performance of reachability algorithms for mixed discrete/continuous systems with uncertain initial states and inputs heavily depends on effective parameter tuning,
+    which enables the verification of safety properties by the computed outer approximation.
+    \badexpl{The terms ``reachability analysis'', ``outer approximations'', ``discrete/continuous systems with uncertainties'', and ``parameter tuning'' are not introduced in a logical order,
+    thus requiring the reader to already know how they relate to one another.}
 }{
     \location{Beginning of introduction} \\
-    Formal methods can determine whether an uncertain dynamical system meets a given specification.
-    Reachability analysis computes all states that are reachable under the given uncertainties, and, thus, can be used for formal verification [1].
-    However, the exact reachable set cannot be computed except for special system classes [2];
-    if a computed outer approximation cannot verify safety, an inner approximation may falsify safety, instead.
-    \goodexpl{The context is set up step by step: First, we introduce formal methods and uncertain dynamical systems, then present reachability analysis as a method and discuss the computation of reachable sets; finally, we explain how inner approximations fit into the context of formal verification.}
+    Reachability analysis provably guarantees avoiding unsafe states of mixed discrete/continuous systems for a set of uncertain initial states and uncertain inputs.
+    Since exact reachable sets can only be computed for a limited number of system classes [36], reachability algorithms compute outer approximations to establish soundness.
+    The performance of these algorithms heavily relies on effective parameter tuning---a safety property may not be verified although it is satisfied by the exact reachable set.
+    \goodexpl{The context is set up step by step, from coarse to fine: First, we introduce reachability analysis and discrete/continuous systems with uncertainties, then introduce exact reachable sets and outer approximations;
+    finally, we emphasize the importance of parameter tuning.}
 }
 
 \noindent
