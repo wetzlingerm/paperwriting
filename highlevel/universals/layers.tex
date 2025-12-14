@@ -7,9 +7,9 @@
     \goodexpl{\textit{Note}: The example is graphically represented in Figure~\ref{fig:layers}.}
     The choice of set representations for computing an inner approximation with the formulae (20) and (23) determines the time complexity of the resulting reachability algorithm in the state dimension.
     Our proposed implementation achieves a polynomial time complexity, as detailed subsequently.
-    \goodexpl{(Depth 0) The introductory paragraph limits the scope of the section by the terms ``set representations'', ``reachability algorithm'', and ``time complexity'', providing readers with a bounded expectation of what follows.}
+    \goodexpl{(Depth 0) The introductory paragraph limits the scope of the section by the terms ``set representations'', ``reachability algorithm'', and ``time complexity'', providing readers with a clear expectation for what will follow.}
     \textit{A. Set Representations and Operations}
-    \goodexpl{(Depth 1) The title clearly refers to the first term, ``set representations'', thus limiting the scope of this subsection.}
+    \goodexpl{(Depth 1) The title refers to the first term, ``set representations'', thus limiting the scope of this subsection.}
     Let us now introduce support functions, polytopes, and (constrained) zonotopes, as well as required operations.
     \goodexpl{(Depth 1) The introductory sentence lists three terms of equal depth, which we expect to follow subsequently, and hints at deeper elements.}
     \textit{Definition 2 (Support Function [21, Def.\ 1])}: The support function (...)
@@ -17,13 +17,13 @@
     \textit{Definition 3 (Polytope [22, Sec.\ 1.1])}: A polytope is (...)
     \goodexpl{(Depth 2) The title of this next set representation definition matches the second element from the list.}
     The evaluation of the linear map $M\mathcal{P}$ of a polytope (...)
-    \goodexpl{(Depth 3) The definition is appended a paragraph about set operations.}
+    \goodexpl{(Depth 3) The definition is followed by a paragraph on set operations.}
     \textit{Definition 4 (Constrained) Zonotope [24, Def.\ 1\&3]}: Using (...)
     \goodexpl{(Depth 2) By the title of the definition, we see that this element corresponds to the third element from the list at the beginning of the subsection.}
     We require the following set operations for zonotopes and constrained zonotopes: (...)
-    \goodexpl{(Depth 3) Similary to the second list element, we expand further on this subtopic.}
+    \goodexpl{(Depth 3) Similarly to the second list element, we expand further on this subtopic.}
     \textit{B. Reachability Algorithm}
-    \goodexpl{(Depth 1) By structure, we are back at a higher depth, now focusing on the two other terms---``reachability algorithm'' and ``time complexity''---from the introductory sentence to the section.}
+    \goodexpl{(Depth 1) We are back at a higher depth, now focusing on the two other terms---``reachability algorithm'' and ``time complexity''---from the introductory sentence to the section.}
     Algorithm 1 computes a sequence of inner approximations of the time-point and time-interval reachable sets derived in Propositions 1 and 2. (...)
     \goodexpl{(Depth 2) The reachability algorithm is introduced first.}
     In each time step $k \in \{0,...,\omega-1\}$, we first (...)
@@ -32,8 +32,10 @@
     \goodexpl{(Depth 2) Finally, the time complexity of the algorithm is discussed.}
 }
 
+\newpage
+
 \noindent
-Different readers approach a paper at different depths: some want the full story, others look only for the main ideas, and some search for specific technical details.
+Different readers approach a paper at different depths: some want the full story, others look only for the main ideas, and some search for technical details.
 A well-structured paper supports all of them by making information easy to locate without requiring a front-to-back reading.
 Typically, these layers of depth align with structural elements---sections, subsections, and paragraphs---each offering a progressively finer level of detail.
 The principle is recursive: the whole paper should be skimmable at the section level, each section at the paragraph level, and each paragraph at the level of individual thoughts.
