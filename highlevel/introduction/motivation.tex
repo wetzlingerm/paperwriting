@@ -1,23 +1,21 @@
 
 \guideline[g:introduction:motivation]
-    {Start by moving from the broad research field to the precise topic.}
+    {Start by moving from the broad research field to the specific topic.}
 
 \goodbadexample[{Adapted from \cite[Sec.~1]{Wetzlinger2021HSCC}}]{
-    \location{Beginning of introduction} \\
+    \location{Beginning of introduction}
     The performance of reachability algorithms for mixed discrete/continuous systems with uncertain initial states and inputs heavily depends on effective parameter tuning,
     which enables the verification of safety properties by the computed outer approximation.
-    \badexpl{The terms ``reachability analysis'', ``outer approximations'', ``discrete/continuous systems with uncertainties'', and ``parameter tuning'' are not introduced in a logical order,
-    thus requiring the reader to already know how they relate to one another.}
+    \badexpl{The terms ``reachability analysis'', ``discrete/continuous systems with uncertainties'', and ``parameter tuning'' are not sequentially introduced, requiring the reader to already know how they relate to one another.}
 }{
-    \location{Beginning of introduction} \\
+    \location{Beginning of introduction}
     Reachability analysis provably guarantees avoiding unsafe states of mixed discrete/continuous systems for a set of uncertain initial states and uncertain inputs.
     Since exact reachable sets can only be computed for a limited number of system classes [36], reachability algorithms compute outer approximations to establish soundness.
     The performance of these algorithms heavily relies on effective parameter tuning---a safety property may not be verified although it is satisfied by the exact reachable set.
-    \goodexpl{The context is set up step by step, from coarse to fine: First, we introduce reachability analysis and discrete/continuous systems with uncertainties, then introduce exact reachable sets and outer approximations;
+    \goodexpl{The context is set up step by step, from coarse to fine: First, we establish the topics ``reachability analysis'' and ``discrete/continuous systems with uncertainties'', then we introduce exact reachable sets and outer approximations;
     finally, we emphasize the importance of parameter tuning.}
 }
 
 \noindent
-Commonly, the first sentence introduces the purpose and relevance of the research field.
-After that, guide the reader from that broad context to the specific topic of the paper in a strictly sequential manner, with each key term in the opening sentences marking a clear step from coarse to fine.
-Avoid circling back or shifting focus---move linearly toward the precise research topic.
+After introducing the purpose and relevance of the research field, guide the reader from that broad context to the specific topic of the paper, with each key term in the opening sentences marking a clear sequential step from coarse to fine.
+% Avoid circling back or shifting focus---move linearly toward your specific research topic.

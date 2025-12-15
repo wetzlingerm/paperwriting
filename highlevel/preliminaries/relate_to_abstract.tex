@@ -3,17 +3,17 @@
     {Directly relate the problem statement to the abstract.}
 
 \goodexample[{\cite[Abstract \& Sec.~III.]{Wetzlinger2023TAC}}]{
-    \location{Abstract} \\
+    \location{Abstract}
     A substantial bottleneck of all reachability algorithms is the \highlightpart{necessity to adequately tune specific algorithm parameters}, such as the time step size, which requires expert knowledge.
-    In this work, we solve this issue with a fully automated reachability algorithm that tunes all algorithm parameters internally such that the \highlightpart{reachable set enclosure respects a user-defined approximation error bound in terms of the Hausdorff distance to the exact reachable set.} \\
-    \location{Problem Statement} \\
+    In this work, we solve this issue with a fully automated reachability algorithm that tunes all algorithm parameters internally such that the \highlightpart{reachable set enclosure respects a user-defined approximation error bound in terms of the Hausdorff distance to the exact reachable set.}
+    \location{Problem Statement}
     (...) by \highlightpart{automatically tuning these algorithm parameters} such that the \highlightpart{Hausdorff distance between the computed enclosure $\widehat{\mathcal{R}}(t)$ and the exact reachable set $\mathcal{R}(t)$ remains below a desired threshold $\varepsilon_{\max}$ at all times:} \\
     \begin{equation*}
         \text{Tune} \; \Delta t, \eta, \rho \; \text{s.t.} \; \forall t \in [0,t_{\text{end}}]\colon d_H(\mathcal{R}(t), \widehat{\mathcal{R}}(t)) \leq \varepsilon_{\max} .
     \end{equation*}
-    \goodexpl{The two links---concerning the manual vs.\ automated tuning of algorithm parameters and respecting a maximum error---become apparent through the use of similar wording.}
+    \goodexpl{The two links---concerning manual vs.\ automated tuning of algorithm parameters and respecting a maximum error---become apparent through the use of similar wording.}
 }
 
 \noindent
-A clear link between the abstract and the problem statement is often best achieved by using similar wording.
-Repeating key phrases is acceptable, as a well-defined problem statement is essential for understanding the main content of the paper.
+A clear link between the abstract and the problem statement is best achieved by using similar wording.
+Repeating key phrases is acceptable as a well-defined problem statement is essential for understanding the main content of the paper.

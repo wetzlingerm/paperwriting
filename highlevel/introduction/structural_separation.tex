@@ -2,30 +2,32 @@
 \guideline[g:introduction:structural_separation]
     {Separate the motivation, related work, and contributions.}
 
+% TODO: move "Paragraph: Related work" to next page
+% TODO: move good part to same page
 \goodbadexample[{Adapted from \cite[Sec.~I.]{Wetzlinger2024CSL}}]{
-    \location{Paragraph: Motivation} \\
+    \location{Paragraph: Motivation}
     (...)
-    If a computed outer approximation cannot verify safety, an inner approximation, \highlightpart{which is often computed based on outer approximations}, may falsify safety, instead. (...) \\
+    If a computed outer approximation cannot verify safety, an inner approximation, \highlightpart{which is often computed based on outer approximations}, may falsify safety, instead. (...)
     \badexpl{Particular approaches generally belong in related work.}
-    \location{Paragraph: Related work} \\
+    \location{Paragraph: Related work}
     \highlightpart{In contrast to our approach, which directly computes an inner approximation}, most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
     Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]:
     This has been shown for outer approximations computed via an \highlightpart{on-the-fly linearization of the nonlinear dynamics, yielding an affine dynamics and a higher-order dynamics, which also forms the basis of our approach}.
     \badexpl{Both highlighted parts represent the bad practice of mixing contributions into the related work.}
-    \location{Paragraph: Contributions} \\
+    \location{Paragraph: Contributions}
     Figure 1 summarizes our main contribution: \highlightempty{}
     While the Minkowski sum of the reachable sets for the affine and higher-order dynamics is a common method to compute outer approximations, (...)
     \badexpl{The contributions are now no longer self-contained because some parts have leaked into the related work.}
 }{
-    \location{Paragraph: Motivation} \\
+    \location{Paragraph: Motivation}
     (...)
     If a computed outer approximation cannot verify safety, an inner approximation \highlightempty{} may falsify safety, instead. (...)
     \goodexpl{Leave approach-specific information out of the motivation.}
-    \location{Paragraph: Related work} \\
+    \location{Paragraph: Related work}
     Most approaches for computing inner approximations for nonlinear systems are based on outer approximations: (...)
     Hence, one can obtain an inner approximation by contracting an outer approximation, as illustrated in [10, Fig. 2]. \highlightempty{}
     \goodexpl{Leave details regarding the contributions out of the related work.}
-    \location{Paragraph: Contributions} \\
+    \location{Paragraph: Contributions}
     Figure 1 summarizes our main contribution:
     \highlightpart{Using an on-the-fly linearization of the nonlinear autonomous dynamics, we obtain an affine dynamics and a higher-order dynamics.}
     While the Minkowski sum of the corresponding reachable sets is a common method to compute outer approximations, (...)
@@ -33,7 +35,7 @@
 }
 
 \noindent
-The motivation sets the frame for the paper by introducing the broad research field and narrowing down to the specific research question.
+The motivation sets the frame for the paper by introducing the broad research field and subsequently narrowing it down to the specific topic.
 Particular approaches addressing that research question are then surveyed in the related work.
 Crucially, present your contributions separately from related work to avoid blurring the distinction between preexisting knowledge and the novelties from your work.
 For longer introductions, consider using distinct subsections instead of paragraphs only.

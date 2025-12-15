@@ -3,7 +3,7 @@
     {Use the preliminaries as a dense look up for the main body.}
 
 \goodbadexample[{\cite[Sec.~2.1 \& Sec.~3.3]{Wetzlinger2024ARCH1}}]{
-    \location{Main Body} \\
+    \location{Main Body}
     Given a random direction $\ell \in \mathbb{R}^r, \left\| \ell \right\|_2 = 1$, we compute the support vector $\widehat{y}(\ell)$ associated to the support function of the computed outer approximation $\widehat{\mathcal{Y}}([0,t_{\text{end}}])$, i.e.,
     \begin{equation*}
         \widehat{y}(\ell) = \rho \big( \widehat{\mathcal{Y}}([0,t_{\text{end}}]), \ell \big) = \max_{k \in \{0,\dots,\omega - 1\}} \rho \big( \widehat{\mathcal{Y}}(\tau_k) , \ell \big) ,
@@ -11,9 +11,9 @@
     \highlightpart{where the support function in a direction $\ell \in \mathbb{R}^n$ is defined by $\rho(\mathcal{S},\ell) \coloneqq \max_{x \in \mathcal{S}} \ell^\top x$}.
     \badexpl{The main body here also ``introduces'' known concepts, which blurs the lines between preexisting knowledge and novel contributions.}
 }{
-    \location{Preliminaries} \\
+    \location{Preliminaries}
     \highlightpart{The support function in a direction $\ell \in \mathbb{R}^n$ is defined by $\rho(\mathcal{S},\ell) \coloneqq \max_{x \in \mathcal{S}} \ell^\top x$} (...).
-    \location{Main Body} \\
+    \location{Main Body}
     Given a random direction $\ell \in \mathbb{R}^r, \left\| \ell \right\|_2 = 1$, we compute the support vector $\widehat{y}(\ell)$ associated to the support function of the computed outer approximation $\widehat{\mathcal{Y}}([0,t_{\text{end}}])$, i.e.,
     \begin{equation*}
         \widehat{y}(\ell) = \rho \big( \widehat{\mathcal{Y}}([0,t_{\text{end}}]), \ell \big) = \max_{k \in \{0,\dots,\omega - 1\}} \rho \big( \widehat{\mathcal{Y}}(\tau_k) , \ell \big) .
