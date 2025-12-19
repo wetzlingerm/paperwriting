@@ -1,0 +1,16 @@
+
+\guideline[g:math:avoid_breaking_expressions]
+    {Avoid line breaks within mathematical expressions.}
+
+\goodbadexample[{\cite[Sec.~2.1]{Wetzlinger2024ARCH1}}]{
+    Sets are denoted by calligraphic letters $S \subseteq \mathbb{R}^n$.
+    For a matrix $\highlightpartmath{M}$ \linebreak $\highlightpartmath{\in \mathbb{R}^{n \times n}}$ and a set $\mathcal{S} \subset \mathbb{R}^n$,
+    the linear map is defined by $M \mathcal{S} \coloneqq \{M s | s \in \mathcal{S}\}$.
+}{
+    Sets are denoted by calligraphic letters $S \subseteq \mathbb{R}^n$.
+    For a matrix $\highlightpartmath{M \in \mathbb{R}^{n \times n}}$ and a set $\mathcal{S} \subset \mathbb{R}^n$,
+    the linear map is defined by $M \mathcal{S} \coloneqq {M s | s \in \mathcal{S}}$.
+}
+
+\noindent
+Line breaks inside mathematical expressions disrupt readability, as the expression is generally seen as an atomic unit of thought that should not be split across lines.
