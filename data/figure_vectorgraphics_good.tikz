@@ -35,7 +35,7 @@ plotstyle5/.style={area legend, draw=good_red, fill=good_red, forget plot}
 group style={rows = \rows, columns = \cols, horizontal sep = \horzsep, vertical sep=\horzsep},
 scale only axis,
 set layers=axis lines on top,
-width=4cm,height=2.75cm,
+width=4cm,height=2.25cm,
 legend style={legend columns=2,legend to name=legendname, legend cell align=left,/tikz/every even column/.append style={column sep=0.75cm}},
 xmin=-730,xmax=-670,ymin=-805,ymax=-770,ticks=none
 ]

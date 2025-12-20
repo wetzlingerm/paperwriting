@@ -17,15 +17,15 @@
 %\draw[red] (10,0) circle(2pt);
 
 % nodes
-\node[anchor=west] at (7.9,2.4) {$\mathcal{L}_{1}$};
-\node[anchor=south] at (7,3.5) {$\mathcal{L}_{2}$};
-\node[anchor=south] at (4.1,3.5) {$\mathcal{L}_{3}$};
+\node[anchor=west] at (7.6,2.1) {$\mathcal{L}_{1}$};
+\node[anchor=south] at (7,2.7) {$\mathcal{L}_{2}$};
+\node[anchor=south] at (3.8,2.7) {$\mathcal{L}_{3}$};
 \node[anchor=west] at (0.8,0.3) {$\mathcal{Y}(t_0)$};
-\node[anchor=south] at (1.3,2.15) {$\widehat{\mathcal{Y}}([0,t_{\text{end}}])$};
+\node[anchor=south] at (1.3,1.7) {$\widehat{\mathcal{Y}}([0,t_{\text{end}}])$};
 
 \begin{axis}[%
-width=8.8cm,
-height=4cm,
+width=8.4cm,
+height=3cm,
 at={(0,0)},
 scale only axis,
 xmin=-30.0000,
@@ -34,7 +34,7 @@ xlabel style={font=\color{white!15!black}},
 xlabel={$y_1$},
 ymin=-5.0000,
 ymax=5.0000,
-ylabel style={font=\color{white!15!black}, yshift=-5pt},
+ylabel style={font=\color{white!15!black}},
 ylabel={$y_2$},
 %axis background/.style={fill=white},
 axis x line*=bottom,
