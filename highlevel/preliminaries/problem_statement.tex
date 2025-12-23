@@ -1,15 +1,19 @@
 
 \guideline[g:preliminaries:problemstatement]
-    {Introduce all necessary information before stating the problem.}
+    {Introduce all necessary information before the problem statement.}
 
-\goodbadexample[{Adapted from \cite[Sec.~2-3]{Wetzlinger2023HSCC}}]{
+\badexample[{Adapted from \cite[Sec.~2-3]{Wetzlinger2023HSCC}}]{
     \textit{Problem 1. (Verification)}
     ~ Given an LTI system $\highlightpartmath{\dot{x} = Ax(t) + Bu(t)}$ where the initial state $x(0)$ and the input $u(t)$ are uncertain within the initial set $\mathcal{X}^0 \subset \mathbb{R}^n$ and the input set $\mathcal{U} \subset \mathbb{R}^m$, respectively, as well as a polytope $\mathcal{K} = \highlightpartmath{\{ z \in \mathbb{R}^r \, | Hz \leq f \}}$, decide whether the output set $\mathcal{Y}(t)$ obtained from the output equation $\highlightpartmath{y(t) = Cx(t) + Wv(t)}$ where $v(t) \in \mathcal{V} \subset \mathbb{R}^o$ stays within the safe set $\mathcal{K}$ at all times $t \in [0,t_\text{end}]$:
     \begin{equation*}
         \forall t \in [0, t_\text{end}]\colon \mathcal{Y}(t) \subseteq \mathcal{K} .
     \end{equation*}
-    \badexpl{The highlighted parts are prerequisite definitions, which distracts from the actual problem statement.}
-}{
+    \badexpl{The highlighted parts are prerequisite definitions, overloading the presentation and distracting from the actual problem statement.}
+}
+
+\newpage
+
+\goodexample{
     \location{Preliminaries}
     \textit{Definition 3. (Polytopes)} The halfspace representation of a polytope $\mathcal{P} \subset \mathbb{R}^n$ is (...):
     \begin{equation*}
@@ -22,9 +26,8 @@
         \dot{x}(t) &= Ax(t) + Bu(t) , \tag{5a} \\
         y(t) &= Cx(t) + Wv(t) . \tag{5b}
     \end{align*}
-    (...) The initial state $x(0)$, the input $u(t)$, and $v(t)$ are uncertain within the \highlightpart{initial set $\mathcal{X}^0 \subset \mathbb{R}^n$, the input set $\mathcal{U} \subset \mathbb{R}^m$, and the output uncertainty set $\mathcal{V} \subset \mathbb{R}^o$}, respectively. (...) \\
-    (...) which extends to the \highlightpart{output set $\mathcal{Y}(t)$ obtained from a set-based evaluation of (5b)}. (...)
-    \goodexpl{The prerequisite definitions are introduced before the problem statement.}
+    (...) The initial state $x(0)$, the input $u(t)$, and $v(t)$ are uncertain within the \highlightpart{initial set $\mathcal{X}^0 \subset \mathbb{R}^n$, the input set $\mathcal{U} \subset \mathbb{R}^m$, and the output uncertainty set $\mathcal{V} \subset \mathbb{R}^o$}, respectively. (...) which extends to the \highlightpart{output set $\mathcal{Y}(t)$ obtained from a set-based evaluation of (5b)}. (...)
+    \goodexpl{Prerequisite definitions are introduced before the problem statement.}
     \textit{Problem 1. (Verification)}
     ~ Given an \highlightpart{LTI system (5)} with \highlightpart{initial set $\mathcal{X}^0 \subset \mathbb{R}^n$, input set $\mathcal{U} \subset \mathbb{R}^m$, and output uncertainty set $\mathcal{V} \subset \mathbb{R}^o$}, as well as a safe set $\mathcal{K} = \highlightpartmath{\langle H, f \rangle_H}$, decide whether
     \begin{equation*}
@@ -35,5 +38,5 @@
 
 \noindent
 The problem statement should be concise and focused on the main question.
-Present all necessary background, notation, and prerequisites beforehand—either in the preliminaries or immediately above the statement.
+Present all necessary notation and pre-existing knowledge beforehand---either in the preliminaries or immediately above the statement.
 Avoid overloading the problem statement with contextual details; lay the groundwork first so the problem can be stated cleanly.
