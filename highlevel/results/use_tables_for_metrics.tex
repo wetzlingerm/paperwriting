@@ -2,15 +2,19 @@
 \guideline[g:results:tables]
     {Use tables to present metrics.}
 
-\goodbadexample[{\cite[Sec.~VII.A. \& Tab.~II]{Wetzlinger2025TAC}}]{
+\badexample[{\cite[Sec.~VII.A. \& Tab.~II]{Wetzlinger2025TAC}}]{
     While the runtime complexity of our proposed algorithms only scales linearly with the number of time steps, the computation time of HJ reachability strongly depends on the partitioning on the grid, as it suffers from the curse of dimensionality.
     \highlightpart{Using $n_{\text{grid}} = 15$ grid points per dimension results in a computation time of $2.4\si{\second}$ in both cases, and $n_{\text{grid}} = 35$ already about $200\si{\second}$.}
-}{
+}
+
+\newpage
+
+\goodexample{
     While the runtime complexity of our proposed algorithms only scales linearly with the number of time steps, the computation time of HJ reachability strongly depends on the partitioning on the grid, \highlightpart{see Table II}, as it suffers from the curse of dimensionality.
 
     \input{data/table_results.tex}
 }
 
 \noindent
-Tables present data in a compact and well-structured format, allowing readers to easily compare results at a glance.
+Tables present data in a compact and structured format, allowing readers to easily compare results at a glance.
 Use tables to display raw values, while reserving the running text for interpretations and explanations.

@@ -2,15 +2,19 @@
 \guideline[g:results:explain_results]
     {Explain and interpret the results.}
 
-\goodbadexample[{\cite[Sec.~V.]{Wetzlinger2024CSL}}]{
+\badexample[{\cite[Sec.~V.]{Wetzlinger2024CSL}}]{
     Algorithm 1 is faster than the scaling approach [10] by orders of magnitude and even faster than the C++ implementation of the projection approach [5].
     \highlightempty{}
-}{
+}
+
+\newpage
+
+\goodexample{
     Algorithm 1 is faster than the scaling approach [10] by orders of magnitude and even faster than the C++ implementation of the projection approach [5]. (...)
     \highlightpart{Most computation time is spent on the range bounding in (9) using interval arithmetic, which explains the fast evaluation of the Lotka-Volterra and Biological Model benchmarks whose Hessian tensor is constant.}
 }
 
 \noindent
 While the raw data of the numerical evaluation is best presented in a table, it is still good practice to briefly summarize the results in the running text.
-Furthermore, provide an explanation for general trends by linking to the properties of all approaches that were run.
-Also, explain surprising findings---often, these cases have a particular exploitable structure.
+Furthermore, provide an explanation for general trends by linking to the properties of the respective approaches.
+Also, explain surprising findings---often, these cases exhibit a particular exploitable structure.
