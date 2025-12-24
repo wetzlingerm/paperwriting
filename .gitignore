@@ -307,3 +307,6 @@ TSWLatexianTemp*
 
 # TikZ externalize
 build
+
+# Versions
+versions/

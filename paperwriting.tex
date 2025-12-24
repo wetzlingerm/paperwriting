@@ -41,10 +41,9 @@
 % \chapter*{\contentsname}
 % \begingroup
 %   \makeatletter
-%   \input{paperwriting_longtoc.toc} % manually copied
+%   \input{paperwriting_longtoc.toc} % manually copied from "standard table of contents run"
 %   \makeatother
 % \endgroup
-
 %% end
 
 
@@ -56,7 +55,7 @@
 
 
 %%%% HIGH LEVEL %%%%
-\part{Organization and Structure}
+\part{Organization and Structure} \label{pt:highlevel}
 
 \input{highlevel/abstract/0_abstract.tex}
 \input{highlevel/universals/0_universals.tex}
@@ -68,7 +67,7 @@
 
 
 %%%% LOW LEVEL %%%%
-\part{Writing and Formatting}
+\part{Writing and Formatting} \label{pt:lowlevel}
 
 \input{lowlevel/nontextelements/0_nontextelements.tex}
 \input{lowlevel/wording/0_wording.tex}
@@ -80,13 +79,17 @@
 
 \backmatter
 
-%%%% LIST OF TERMS %%%%
-% \printglossary[title=List of Terms]
-
 %%%% REFERENCES %%%%
 \newrefcontext[labelprefix=W]
 \printbibliography[keyword={W},title={References}]
 
 \input{backmatter/furtherresources.tex}
+
+
+%%%% EMPTY PAGE %%%%
+\clearpage
+\thispagestyle{empty}
+\null
+\newpage
 
 \end{document}
